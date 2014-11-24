@@ -1,34 +1,24 @@
-
 SHELL=/bin/sh
-MAKEFLAGS=-j20
+MAKEFLAGS=-j8
 
 CPLUS = g++
 
 INC =                           \
         -I.                     \
         -DNDEBUG                \
-        -DBITCOIN               \
-        -DWANT_DENSE            \
-
-#-DBITCOIN               \
-#-DDARKCOIN              \
-#-DLITECOIN              \
-#-DPROTOSHARES           \
-#-DFEDORACOIN            \
+#        -DLITECOIN              \
 
 COPT =                          \
         -g0                     \
-        -O6                     \
+        -O3                     \
         -m64                    \
         -Wall                   \
-        -flto                   \
         -msse3                  \
         -Wextra                 \
         -Wformat                \
         -pedantic               \
         -std=c++0x              \
         -ffast-math             \
-        -march=native           \
         -fno-check-new          \
         -funroll-loops          \
         -Wno-deprecated         \
@@ -47,8 +37,12 @@ LIBS =                          \
     -lcrypto                    \
     -ldl                        \
 
-all:parser
+all:parser analyze
 
+analyze:analyze.cpp
+	g++ -o analyze analyze.cpp -std=c++11
+dumphashes:
+	./parser stat
 .objs/callback.o : callback.cpp
 	@echo c++ -- callback.cpp
 	@mkdir -p .deps
@@ -126,83 +120,6 @@ all:parser
 	@${CPLUS} -MD ${INC} ${COPT}  -c cb/transactions.cpp -o .objs/transactions.o
 	@mv .objs/transactions.d .deps
 
-.objs/blake.o : h9/blake.c
-	@echo cc  -- h9/blake.c
-	@mkdir -p .deps
-	@mkdir -p .objs
-	@${CC} -MD ${INC} ${COPT}  -w -c h9/blake.c -o .objs/blake.o
-	@mv .objs/blake.d .deps
-
-.objs/bmw.o : h9/bmw.c
-	@echo cc  -- h9/bmw.c
-	@mkdir -p .deps
-	@mkdir -p .objs
-	@${CC} -MD ${INC} ${COPT}  -w -c h9/bmw.c -o .objs/bmw.o
-	@mv .objs/bmw.d .deps
-
-.objs/cubehash.o : h9/cubehash.c
-	@echo cc  -- h9/cubehash.c
-	@mkdir -p .deps
-	@mkdir -p .objs
-	@${CC} -MD ${INC} ${COPT}  -w -c h9/cubehash.c -o .objs/cubehash.o
-	@mv .objs/cubehash.d .deps
-
-.objs/echo.o : h9/echo.c
-	@echo cc  -- h9/echo.c
-	@mkdir -p .deps
-	@mkdir -p .objs
-	@${CC} -MD ${INC} ${COPT}  -w -c h9/echo.c -o .objs/echo.o
-	@mv .objs/echo.d .deps
-
-.objs/groestl.o : h9/groestl.c
-	@echo cc  -- h9/groestl.c
-	@mkdir -p .deps
-	@mkdir -p .objs
-	@${CC} -MD ${INC} ${COPT}  -w -c h9/groestl.c -o .objs/groestl.o
-	@mv .objs/groestl.d .deps
-
-.objs/jh.o : h9/jh.c
-	@echo cc  -- h9/jh.c
-	@mkdir -p .deps
-	@mkdir -p .objs
-	@${CC} -MD ${INC} ${COPT}  -w -c h9/jh.c -o .objs/jh.o
-	@mv .objs/jh.d .deps
-
-.objs/keccak.o : h9/keccak.c
-	@echo cc  -- h9/keccak.c
-	@mkdir -p .deps
-	@mkdir -p .objs
-	@${CC} -MD ${INC} ${COPT}  -w -c h9/keccak.c -o .objs/keccak.o
-	@mv .objs/keccak.d .deps
-
-.objs/luffa.o : h9/luffa.c
-	@echo cc  -- h9/luffa.c
-	@mkdir -p .deps
-	@mkdir -p .objs
-	@${CC} -MD ${INC} ${COPT}  -w -c h9/luffa.c -o .objs/luffa.o
-	@mv .objs/luffa.d .deps
-
-.objs/shavite.o : h9/shavite.c
-	@echo cc  -- h9/shavite.c
-	@mkdir -p .deps
-	@mkdir -p .objs
-	@${CC} -MD ${INC} ${COPT}  -w -c h9/shavite.c -o .objs/shavite.o
-	@mv .objs/shavite.d .deps
-
-.objs/simd.o : h9/simd.c
-	@echo cc  -- h9/simd.c
-	@mkdir -p .deps
-	@mkdir -p .objs
-	@${CC} -MD ${INC} ${COPT}  -w -c h9/simd.c -o .objs/simd.o
-	@mv .objs/simd.d .deps
-
-.objs/skein.o : h9/skein.c
-	@echo cc  -- h9/skein.c
-	@mkdir -p .deps
-	@mkdir -p .objs
-	@${CC} -MD ${INC} ${COPT}  -w -c h9/skein.c -o .objs/skein.o
-	@mv .objs/skein.d .deps
-
 .objs/opcodes.o : opcodes.cpp
 	@echo c++ -- opcodes.cpp
 	@mkdir -p .deps
@@ -246,33 +163,22 @@ all:parser
 	@mv .objs/util.d .deps
 
 OBJS=                       \
-    .objs/callback.o        \
     .objs/allBalances.o     \
+    .objs/callback.o        \
     .objs/closure.o         \
     .objs/dumpTX.o          \
     .objs/help.o            \
+    .objs/opcodes.o         \
+    .objs/option.o          \
+    .objs/parser.o          \
     .objs/pristine.o        \
     .objs/rewards.o         \
+    .objs/rmd160.o          \
+    .objs/sha256.o          \
     .objs/simpleStats.o     \
     .objs/sql.o             \
     .objs/taint.o           \
     .objs/transactions.o    \
-    .objs/blake.o           \
-    .objs/bmw.o             \
-    .objs/cubehash.o        \
-    .objs/echo.o            \
-    .objs/groestl.o         \
-    .objs/jh.o              \
-    .objs/keccak.o          \
-    .objs/luffa.o           \
-    .objs/shavite.o         \
-    .objs/simd.o            \
-    .objs/skein.o           \
-    .objs/opcodes.o         \
-    .objs/option.o          \
-    .objs/parser.o          \
-    .objs/rmd160.o          \
-    .objs/sha256.o          \
     .objs/util.o            \
 
 parser:${OBJS}
@@ -280,7 +186,7 @@ parser:${OBJS}
 	@${CPLUS} ${LOPT} ${COPT} -o parser ${OBJS} ${LIBS}
 
 clean:
-	-rm -r -f *.o *.i .objs .deps *.d parser
+	-rm -r -f *.o *.i .objs .deps *.d parser analyze
 
 -include .deps/*
 

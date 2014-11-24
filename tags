@@ -1,0 +1,1212 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALWAYS_INLINE	common.h	15;"	d
+ALWAYS_INLINE	common.h	19;"	d
+Addr	cb/allBalances.cpp	/^struct Addr$/;"	s	file:
+Addr	cb/closure.cpp	/^typedef uint160_t Addr;$/;"	t	file:
+Addr::hash	cb/allBalances.cpp	/^    uint160_t hash;$/;"	m	struct:Addr	file:	access:public
+Addr::lastIn	cb/allBalances.cpp	/^    uint32_t lastIn;$/;"	m	struct:Addr	file:	access:public
+Addr::lastOut	cb/allBalances.cpp	/^    uint32_t lastOut;$/;"	m	struct:Addr	file:	access:public
+Addr::nbIn	cb/allBalances.cpp	/^    uint64_t nbIn;$/;"	m	struct:Addr	file:	access:public
+Addr::nbOut	cb/allBalances.cpp	/^    uint64_t nbOut;$/;"	m	struct:Addr	file:	access:public
+Addr::outputVec	cb/allBalances.cpp	/^    OutputVec *outputVec;$/;"	m	struct:Addr	file:	access:public
+Addr::sum	cb/allBalances.cpp	/^    uint64_t sum;$/;"	m	struct:Addr	file:	access:public
+AddrMap	cb/allBalances.cpp	/^typedef GoogMap<Hash160, Addr*, Hash160Hasher, Hash160Equal>::Map AddrMap;$/;"	t	file:
+AddrMap	cb/closure.cpp	/^typedef GoogMap<Hash160, uint64_t, Hash160Hasher, Hash160Equal >::Map AddrMap;$/;"	t	file:
+AddrMap	cb/transactions.cpp	/^typedef GoogMap<Hash160, int, Hash160Hasher, Hash160Equal>::Map AddrMap;$/;"	t	file:
+AllBalances	cb/allBalances.cpp	/^    AllBalances()$/;"	f	struct:AllBalances	access:public	signature:()
+AllBalances	cb/allBalances.cpp	/^struct AllBalances:public Callback$/;"	s	file:	inherits:Callback
+AllBalances::AllBalances	cb/allBalances.cpp	/^    AllBalances()$/;"	f	struct:AllBalances	access:public	signature:()
+AllBalances::addrMap	cb/allBalances.cpp	/^    AddrMap addrMap;$/;"	m	struct:AllBalances	file:	access:public
+AllBalances::aliases	cb/allBalances.cpp	/^    virtual void aliases($/;"	f	struct:AllBalances	access:public	signature:( std::vector<const char*> &v ) const
+AllBalances::allAddrs	cb/allBalances.cpp	/^    std::vector<Addr*> allAddrs;$/;"	m	struct:AllBalances	file:	access:public
+AllBalances::blockTime	cb/allBalances.cpp	/^    uint32_t blockTime;$/;"	m	struct:AllBalances	file:	access:public
+AllBalances::curBlock	cb/allBalances.cpp	/^    const Block *curBlock;$/;"	m	struct:AllBalances	file:	access:public
+AllBalances::cutoffBlock	cb/allBalances.cpp	/^    int64_t cutoffBlock;$/;"	m	struct:AllBalances	file:	access:public
+AllBalances::detailed	cb/allBalances.cpp	/^    bool detailed;$/;"	m	struct:AllBalances	file:	access:public
+AllBalances::edge	cb/allBalances.cpp	/^    virtual void edge($/;"	f	struct:AllBalances	access:public	signature:( uint64_t value, const uint8_t *upTXHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize, const uint8_t *downTXHash, uint64_t inputIndex, const uint8_t *inputScript, uint64_t inputScriptSize )
+AllBalances::endOutput	cb/allBalances.cpp	/^    virtual void endOutput($/;"	f	struct:AllBalances	access:public	signature:( const uint8_t *p, uint64_t value, const uint8_t *txHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize )
+AllBalances::firstBlock	cb/allBalances.cpp	/^    const Block *firstBlock;$/;"	m	struct:AllBalances	file:	access:public
+AllBalances::gmTime	cb/allBalances.cpp	/^    static void gmTime($/;"	f	struct:AllBalances	access:public	signature:( char *timeBuf, const time_t &last )
+AllBalances::init	cb/allBalances.cpp	/^    virtual int init($/;"	f	struct:AllBalances	access:public	signature:( int argc, const char *argv[] )
+AllBalances::lastBlock	cb/allBalances.cpp	/^    const Block *lastBlock;$/;"	m	struct:AllBalances	file:	access:public
+AllBalances::limit	cb/allBalances.cpp	/^    int64_t limit;$/;"	m	struct:AllBalances	file:	access:public
+AllBalances::move	cb/allBalances.cpp	/^    void move($/;"	f	struct:AllBalances	access:public	signature:( const uint8_t *script, uint64_t scriptSize, const uint8_t *upTXHash, int64_t outputIndex, int64_t value, const uint8_t *downTXHash = 0, uint64_t inputIndex = -1 )
+AllBalances::name	cb/allBalances.cpp	/^    virtual const char                   *name() const         { return "allBalances"; }$/;"	f	struct:AllBalances	access:public	signature:() const
+AllBalances::needTXHash	cb/allBalances.cpp	/^    virtual bool                         needTXHash() const    { return true;          }$/;"	f	struct:AllBalances	access:public	signature:() const
+AllBalances::offset	cb/allBalances.cpp	/^    uint64_t offset;$/;"	m	struct:AllBalances	file:	access:public
+AllBalances::optionParser	cb/allBalances.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;       }$/;"	f	struct:AllBalances	access:public	signature:() const
+AllBalances::parser	cb/allBalances.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:AllBalances	file:	access:public
+AllBalances::restrictMap	cb/allBalances.cpp	/^    RestrictMap restrictMap;$/;"	m	struct:AllBalances	file:	access:public
+AllBalances::restricts	cb/allBalances.cpp	/^    std::vector<uint160_t> restricts;$/;"	m	struct:AllBalances	file:	access:public
+AllBalances::showAddr	cb/allBalances.cpp	/^    int64_t showAddr;$/;"	m	struct:AllBalances	file:	access:public
+AllBalances::start	cb/allBalances.cpp	/^    virtual void start($/;"	f	struct:AllBalances	access:public	signature:( const Block *s, const Block *e )
+AllBalances::startBlock	cb/allBalances.cpp	/^    virtual void startBlock($/;"	f	struct:AllBalances	access:public	signature:( const Block *b, uint64_t chainSize )
+AllBalances::wrapup	cb/allBalances.cpp	/^    virtual void wrapup()$/;"	f	struct:AllBalances	access:public	signature:()
+Block	util.h	/^    struct Block$/;"	s
+Block::data	util.h	/^        const uint8_t *data;$/;"	m	struct:Block	access:public
+Block::height	util.h	/^        int64_t       height;$/;"	m	struct:Block	access:public
+Block::next	util.h	/^        Block         *next;$/;"	m	struct:Block	access:public
+Block::prev	util.h	/^        Block         *prev;$/;"	m	struct:Block	access:public
+BlockMap	parser.cpp	/^typedef GoogMap<Hash256,         Block*, Hash256Hasher, Hash256Equal>::Map BlockMap;$/;"	t	file:
+CBMap	callback.cpp	/^typedef std::map<uintptr_t, Callback*> CBMap;$/;"	t	file:
+Callback	callback.cpp	/^Callback::Callback()$/;"	f	class:Callback	signature:()
+Callback	callback.h	/^        Callback();$/;"	p	struct:Callback	access:public	signature:()
+Callback	callback.h	/^    struct Callback$/;"	s
+Callback	option.h	/^class Callback {$/;"	c	namespace:optparse
+Callback::Callback	callback.cpp	/^Callback::Callback()$/;"	f	class:Callback	signature:()
+Callback::Callback	callback.h	/^        Callback();$/;"	p	struct:Callback	access:public	signature:()
+Callback::Parser	callback.h	/^        typedef optparse::OptionParser Parser;$/;"	t	struct:Callback	access:public
+Callback::aliases	callback.h	/^        virtual void               aliases(std::vector<const char *> &v) const {               } \/\/ Alternate names for callback$/;"	f	struct:Callback	access:public	signature:(std::vector<const char *> &v) const
+Callback::edge	callback.h	/^        virtual void edge($/;"	f	struct:Callback	access:public	signature:( uint64_t value, const uint8_t *upTXHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize, const uint8_t *downTXHash, uint64_t inputIndex, const uint8_t *inputScript, uint64_t inputScriptSize )
+Callback::endBlock	callback.h	/^        virtual void     endBlock(  const Block *b                     )       {               }  \/\/ Called when an end of block is encountered$/;"	f	struct:Callback	access:public	signature:( const Block *b )
+Callback::endBlock	callback.h	/^        virtual void     endBlock(const uint8_t *p                     )       {               }  \/\/ Called when an end of block is encountered during first pass$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+Callback::endInput	callback.h	/^        virtual void     endInput(const uint8_t *p                     )       {               }  \/\/ Called when at the end of a TX input$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+Callback::endInputs	callback.h	/^        virtual void    endInputs(const uint8_t *p                     )       {               }  \/\/ Called when the end of a TX's input array is encountered$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+Callback::endMap	callback.h	/^        virtual void       endMap(const uint8_t *p                     )       {               }  \/\/ Called when a blockchain file is unmapped from memory$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+Callback::endOutput	callback.h	/^        virtual void endOutput($/;"	f	struct:Callback	access:public	signature:( const uint8_t *p, uint64_t value, const uint8_t *txHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize )
+Callback::endOutputs	callback.h	/^        virtual void   endOutputs(const uint8_t *p                     )       {               }  \/\/ Called when the end of a TX's output array is encountered$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+Callback::endTX	callback.h	/^        virtual void        endTX(const uint8_t *p                     )       {               }  \/\/ Called when an end of TX is encountered$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+Callback::find	callback.cpp	/^Callback *Callback::find($/;"	f	class:Callback	signature:( const char *name, bool printList )
+Callback::find	callback.h	/^        static Callback *find(const char *name, bool printList=false);$/;"	p	struct:Callback	access:public	signature:(const char *name, bool printList=false)
+Callback::init	callback.h	/^        virtual int                   init(int argc, const char *argv[])       { return 0;     } \/\/ Called after callback construction, with command line arguments$/;"	f	struct:Callback	access:public	signature:(int argc, const char *argv[])
+Callback::name	callback.h	/^        virtual const char           *name(                            ) const = 0;              \/\/ Main name for callback$/;"	p	struct:Callback	access:public	signature:( ) const
+Callback::needTXHash	callback.h	/^        virtual bool            needTXHash(                            ) const { return false; } \/\/ Overload if you need parser to compute TX hashes$/;"	f	struct:Callback	access:public	signature:( ) const
+Callback::optionParser	callback.h	/^        virtual const Parser *optionParser(                            ) const = 0;              \/\/ Option parser object for callback$/;"	p	struct:Callback	access:public	signature:( ) const
+Callback::showAllHelps	callback.cpp	/^void Callback::showAllHelps($/;"	f	class:Callback	signature:( bool longHelp )
+Callback::showAllHelps	callback.h	/^        static void showAllHelps(bool longHelp);$/;"	p	struct:Callback	access:public	signature:(bool longHelp)
+Callback::start	callback.h	/^        virtual void        start(  const Block *s, const Block *e     )       {               }  \/\/ Called when the second parse of the full chain starts$/;"	f	struct:Callback	access:public	signature:( const Block *s, const Block *e )
+Callback::startBlock	callback.h	/^        virtual void   startBlock(  const Block *b, uint64_t chainSize )       {               }  \/\/ Called when a new block is encountered$/;"	f	struct:Callback	access:public	signature:( const Block *b, uint64_t chainSize )
+Callback::startBlock	callback.h	/^        virtual void   startBlock(const uint8_t *p                     )       {               }  \/\/ Called when a block is encountered during first pass$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+Callback::startInput	callback.h	/^        virtual void   startInput(const uint8_t *p                     )       {               }  \/\/ Called when a TX input is encountered$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+Callback::startInputs	callback.h	/^        virtual void  startInputs(const uint8_t *p                     )       {               }  \/\/ Called when the start of a TX's input array is encountered$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+Callback::startMap	callback.h	/^        virtual void     startMap(const uint8_t *p                     )       {               }  \/\/ Called when a blockchain file is mapped into memory$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+Callback::startOutput	callback.h	/^        virtual void  startOutput(const uint8_t *p                     )       {               }  \/\/ Called when a TX output is encountered$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+Callback::startOutputs	callback.h	/^        virtual void startOutputs(const uint8_t *p                     )       {               }  \/\/ Called when the start of a TX's output array is encountered$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+Callback::startTX	callback.h	/^        virtual void      startTX(const uint8_t *p, const uint8_t *hash)       {               }  \/\/ Called when a new TX is encountered$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p, const uint8_t *hash)
+Callback::wrapup	callback.h	/^        virtual void       wrapup(                                     )       {               }  \/\/ Called when the whole chain has been parsed$/;"	f	struct:Callback	access:public	signature:( )
+Closure	cb/closure.cpp	/^    Closure()$/;"	f	struct:Closure	access:public	signature:()
+Closure	cb/closure.cpp	/^struct Closure:public Callback$/;"	s	file:	inherits:Callback
+Closure::Closure	cb/closure.cpp	/^    Closure()$/;"	f	struct:Closure	access:public	signature:()
+Closure::addrMap	cb/closure.cpp	/^    AddrMap addrMap;$/;"	m	struct:Closure	file:	access:public
+Closure::aliases	cb/closure.cpp	/^    virtual void aliases($/;"	f	struct:Closure	access:public	signature:( std::vector<const char*> &v ) const
+Closure::allAddrs	cb/closure.cpp	/^    std::vector<Addr*> allAddrs;$/;"	m	struct:Closure	file:	access:public
+Closure::edge	cb/closure.cpp	/^    virtual void edge($/;"	f	struct:Closure	access:public	signature:( uint64_t value, const uint8_t *upTXHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize, const uint8_t *downTXHash, uint64_t inputIndex, const uint8_t *inputScript, uint64_t inputScriptSize )
+Closure::endTX	cb/closure.cpp	/^    virtual void endTX($/;"	f	struct:Closure	access:public	signature:( const uint8_t *p )
+Closure::graph	cb/closure.cpp	/^    Graph graph;$/;"	m	struct:Closure	file:	access:public
+Closure::init	cb/closure.cpp	/^    virtual int init($/;"	f	struct:Closure	access:public	signature:( int argc, const char *argv[] )
+Closure::name	cb/closure.cpp	/^    virtual const char                   *name() const         { return "closure"; }$/;"	f	struct:Closure	access:public	signature:() const
+Closure::needTXHash	cb/closure.cpp	/^    virtual bool                         needTXHash() const    { return true;      }$/;"	f	struct:Closure	access:public	signature:() const
+Closure::optionParser	cb/closure.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;   }$/;"	f	struct:Closure	access:public	signature:() const
+Closure::parser	cb/closure.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:Closure	file:	access:public
+Closure::rootHashes	cb/closure.cpp	/^    std::vector<uint160_t> rootHashes;$/;"	m	struct:Closure	file:	access:public
+Closure::startTX	cb/closure.cpp	/^    virtual void startTX($/;"	f	struct:Closure	access:public	signature:( const uint8_t *p, const uint8_t * )
+Closure::startTime	cb/closure.cpp	/^    double startTime;$/;"	m	struct:Closure	file:	access:public
+Closure::vertices	cb/closure.cpp	/^    std::vector<uint64_t> vertices;$/;"	m	struct:Closure	file:	access:public
+Closure::wrapup	cb/closure.cpp	/^    virtual void wrapup()$/;"	f	struct:Closure	access:public	signature:()
+Cmp	callback.cpp	/^struct Cmp$/;"	s	file:
+Cmp::operator ()	callback.cpp	/^    bool operator()($/;"	f	struct:Cmp	access:public	signature:( const Callback *a, const Callback *b )
+CompareAddr	cb/allBalances.cpp	/^struct CompareAddr$/;"	s	file:
+CompareAddr::operator ()	cb/allBalances.cpp	/^    bool operator()($/;"	f	struct:CompareAddr	access:public	signature:( const Addr *const &a, const Addr *const &b ) const
+DO	parser.cpp	47;"	d	file:
+DO	parser.cpp	60;"	d	file:
+DumpTX	cb/dumpTX.cpp	/^    DumpTX()$/;"	f	struct:DumpTX	access:public	signature:()
+DumpTX	cb/dumpTX.cpp	/^struct DumpTX:public Callback$/;"	s	file:	inherits:Callback
+DumpTX::DumpTX	cb/dumpTX.cpp	/^    DumpTX()$/;"	f	struct:DumpTX	access:public	signature:()
+DumpTX::aliases	cb/dumpTX.cpp	/^    virtual void aliases($/;"	f	struct:DumpTX	access:public	signature:( std::vector<const char*> &v ) const
+DumpTX::bTime	cb/dumpTX.cpp	/^    uint64_t bTime;$/;"	m	struct:DumpTX	file:	access:public
+DumpTX::canonicalHexDump	cb/dumpTX.cpp	/^    static void canonicalHexDump($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p, size_t size, const char *indent )
+DumpTX::currBlock	cb/dumpTX.cpp	/^    uint64_t currBlock;$/;"	m	struct:DumpTX	file:	access:public
+DumpTX::dump	cb/dumpTX.cpp	/^    bool dump;$/;"	m	struct:DumpTX	file:	access:public
+DumpTX::edge	cb/dumpTX.cpp	/^    virtual void edge($/;"	f	struct:DumpTX	access:public	signature:( uint64_t value, const uint8_t *upTXHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize, const uint8_t *downTXHash, uint64_t inputIndex, const uint8_t *inputScript, uint64_t inputScriptSize )
+DumpTX::endInput	cb/dumpTX.cpp	/^    virtual void endInput($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p )
+DumpTX::endInputs	cb/dumpTX.cpp	/^    virtual void endInputs($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p )
+DumpTX::endOutput	cb/dumpTX.cpp	/^    virtual void endOutput($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p, uint64_t value, const uint8_t *txHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize )
+DumpTX::endOutputs	cb/dumpTX.cpp	/^    virtual void endOutputs($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p )
+DumpTX::endTX	cb/dumpTX.cpp	/^    virtual void endTX($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p )
+DumpTX::init	cb/dumpTX.cpp	/^    virtual int init($/;"	f	struct:DumpTX	access:public	signature:( int argc, const char *argv[] )
+DumpTX::isGenTX	cb/dumpTX.cpp	/^    bool isGenTX;$/;"	m	struct:DumpTX	file:	access:public
+DumpTX::name	cb/dumpTX.cpp	/^    virtual const char                   *name() const         { return "dumpTX"; }$/;"	f	struct:DumpTX	access:public	signature:() const
+DumpTX::nbDumped	cb/dumpTX.cpp	/^    uint64_t nbDumped;$/;"	m	struct:DumpTX	file:	access:public
+DumpTX::nbInputs	cb/dumpTX.cpp	/^    uint64_t nbInputs;$/;"	m	struct:DumpTX	file:	access:public
+DumpTX::nbOutputs	cb/dumpTX.cpp	/^    uint64_t nbOutputs;$/;"	m	struct:DumpTX	file:	access:public
+DumpTX::needTXHash	cb/dumpTX.cpp	/^    virtual bool                         needTXHash() const    { return true;     }$/;"	f	struct:DumpTX	access:public	signature:() const
+DumpTX::optionParser	cb/dumpTX.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;  }$/;"	f	struct:DumpTX	access:public	signature:() const
+DumpTX::parser	cb/dumpTX.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:DumpTX	file:	access:public
+DumpTX::rootHashes	cb/dumpTX.cpp	/^    std::vector<uint256_t> rootHashes;$/;"	m	struct:DumpTX	file:	access:public
+DumpTX::showScriptInfo	cb/dumpTX.cpp	/^    static void showScriptInfo($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *outputScript, uint64_t outputScriptSize )
+DumpTX::startBlock	cb/dumpTX.cpp	/^    virtual void startBlock($/;"	f	struct:DumpTX	access:public	signature:( const Block *b, uint64_t )
+DumpTX::startInput	cb/dumpTX.cpp	/^    virtual void startInput($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p )
+DumpTX::startInputs	cb/dumpTX.cpp	/^    virtual void startInputs($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p )
+DumpTX::startOutput	cb/dumpTX.cpp	/^    virtual void startOutput($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p )
+DumpTX::startOutputs	cb/dumpTX.cpp	/^    virtual void startOutputs($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p )
+DumpTX::startTX	cb/dumpTX.cpp	/^    virtual void startTX($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p, const uint8_t *hash )
+DumpTX::txMap	cb/dumpTX.cpp	/^    TxMap txMap;$/;"	m	struct:DumpTX	file:	access:public
+DumpTX::txStart	cb/dumpTX.cpp	/^    const uint8_t *txStart;$/;"	m	struct:DumpTX	file:	access:public
+DumpTX::valueIn	cb/dumpTX.cpp	/^    uint64_t valueIn;$/;"	m	struct:DumpTX	file:	access:public
+DumpTX::valueOut	cb/dumpTX.cpp	/^    uint64_t valueOut;$/;"	m	struct:DumpTX	file:	access:public
+GoogMap	util.h	/^        struct GoogMap$/;"	s
+GoogMap::Map	util.h	/^            struct Map:public MapBase$/;"	s	struct:GoogMap	inherits:MapBase	access:public
+GoogMap::Map::setEmptyKey	util.h	/^                void setEmptyKey($/;"	f	struct:GoogMap::Map	access:public	signature:( const Key &empty )
+GoogMap::MapBase	util.h	/^            > MapBase;$/;"	t	struct:GoogMap	access:public
+Graph	cb/closure.cpp	/^typedef boost::adjacency_list<boost::vecS, boost::vecS, boost::undirectedS> Graph;$/;"	t	file:
+Hash160	util.h	/^    typedef const uint8_t *Hash160;$/;"	t
+Hash160Equal	util.h	/^    struct Hash160Equal$/;"	s
+Hash160Equal::operator ()	util.h	/^        bool operator()($/;"	f	struct:Hash160Equal	access:public	signature:( const Hash160 &ha, const Hash160 &hb ) const
+Hash160Hasher	util.h	/^    struct Hash160Hasher { uint64_t operator()( const Hash160 &hash160) const { uintptr_t i = reinterpret_cast<uintptr_t>(hash160); const uint64_t *p = reinterpret_cast<const uint64_t*>(i); return p[0]; } };$/;"	s
+Hash160Hasher::operator ()	util.h	/^    struct Hash160Hasher { uint64_t operator()( const Hash160 &hash160) const { uintptr_t i = reinterpret_cast<uintptr_t>(hash160); const uint64_t *p = reinterpret_cast<const uint64_t*>(i); return p[0]; } };$/;"	f	struct:Hash160Hasher	access:public	signature:( const Hash160 &hash160) const
+Hash256	util.h	/^    typedef const uint8_t *Hash256;$/;"	t
+Hash256Equal	util.h	/^    struct Hash256Equal$/;"	s
+Hash256Equal::operator ()	util.h	/^        bool operator()($/;"	f	struct:Hash256Equal	access:public	signature:( const Hash256 &ha, const Hash256 &hb ) const
+Hash256Hasher	util.h	/^    struct Hash256Hasher { uint64_t operator()( const Hash256 &hash256) const { uintptr_t i = reinterpret_cast<uintptr_t>(hash256); const uint64_t *p = reinterpret_cast<const uint64_t*>(i); return p[0]; } };$/;"	s
+Hash256Hasher::operator ()	util.h	/^    struct Hash256Hasher { uint64_t operator()( const Hash256 &hash256) const { uintptr_t i = reinterpret_cast<uintptr_t>(hash256); const uint64_t *p = reinterpret_cast<const uint64_t*>(i); return p[0]; } };$/;"	f	struct:Hash256Hasher	access:public	signature:( const Hash256 &hash256) const
+Help	cb/help.cpp	/^    Help()$/;"	f	struct:Help	access:public	signature:()
+Help	cb/help.cpp	/^struct Help:public Callback$/;"	s	file:	inherits:Callback
+Help::Help	cb/help.cpp	/^    Help()$/;"	f	struct:Help	access:public	signature:()
+Help::aliases	cb/help.cpp	/^    virtual void aliases($/;"	f	struct:Help	access:public	signature:( std::vector<const char*> &v ) const
+Help::init	cb/help.cpp	/^    virtual int init($/;"	f	struct:Help	access:public	signature:( int argc, const char *argv[] )
+Help::name	cb/help.cpp	/^    virtual const char             *name() const               { return "help"; }$/;"	f	struct:Help	access:public	signature:() const
+Help::needTXHash	cb/help.cpp	/^    virtual bool                   needTXHash() const          { return false;  }$/;"	f	struct:Help	access:public	signature:() const
+Help::optionParser	cb/help.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;}$/;"	f	struct:Help	access:public	signature:() const
+Help::parser	cb/help.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:Help	file:	access:public
+LOAD	util.h	167;"	d
+LOAD_VARINT	util.h	171;"	d
+Map	parser.cpp	/^struct Map$/;"	s	file:
+Map	util.h	/^            struct Map:public MapBase$/;"	s	struct:GoogMap	inherits:MapBase	access:public
+Map::fd	parser.cpp	/^    int fd;$/;"	m	struct:Map	file:	access:public
+Map::name	parser.cpp	/^    std::string name;$/;"	m	struct:Map	file:	access:public
+Map::p	parser.cpp	/^    const uint8_t *p;$/;"	m	struct:Map	file:	access:public
+Map::size	parser.cpp	/^    uint64_t size;$/;"	m	struct:Map	file:	access:public
+MapBase	util.h	/^            > MapBase;$/;"	t	struct:GoogMap	access:public
+Number	cb/taint.cpp	/^typedef long double Number;$/;"	t	file:
+OPCODE	opcodes.cpp	10;"	d	file:
+OPCODE	opcodes.cpp	8;"	d	file:
+OPCODE	opcodes.h	124;"	d
+OPCODE	opcodes.h	130;"	d
+OPCODES	opcodes.h	/^            OPCODES$/;"	e	enum:Opcode
+OPCODES	opcodes.h	6;"	d
+OPTIONPARSER_H_	option.h	61;"	d
+O_DIRECT	parser.cpp	17;"	d	file:
+Opcode	opcodes.h	/^        enum Opcode$/;"	g
+Option	option.h	/^    Option() : _action("store"), _type("string"), _nargs(1), _callback(0) {}$/;"	f	class:optparse::Option	access:public	signature:()
+Option	option.h	/^class Option {$/;"	c	namespace:optparse
+OptionGroup	option.h	/^    OptionGroup(const OptionParser& p, const std::string& t, const std::string& d = "") :$/;"	f	class:optparse::OptionGroup	access:public	signature:(const OptionParser& p, const std::string& t, const std::string& d = Ó)
+OptionGroup	option.h	/^class OptionGroup : public OptionParser {$/;"	c	namespace:optparse	inherits:OptionParser
+OptionParser	option.cpp	/^OptionParser::OptionParser() :$/;"	f	class:optparse::OptionParser	signature:()
+OptionParser	option.h	/^    OptionParser();$/;"	p	class:optparse::OptionParser	access:public	signature:()
+OptionParser	option.h	/^class OptionParser {$/;"	c	namespace:optparse
+Output	cb/allBalances.cpp	/^struct Output {$/;"	s	file:
+Output::downTXHash	cb/allBalances.cpp	/^    const uint8_t *downTXHash;$/;"	m	struct:Output	file:	access:public
+Output::inputIndex	cb/allBalances.cpp	/^    uint64_t inputIndex;$/;"	m	struct:Output	file:	access:public
+Output::outputIndex	cb/allBalances.cpp	/^    uint64_t outputIndex;$/;"	m	struct:Output	file:	access:public
+Output::time	cb/allBalances.cpp	/^    int64_t time;$/;"	m	struct:Output	file:	access:public
+Output::upTXHash	cb/allBalances.cpp	/^    const uint8_t *upTXHash;$/;"	m	struct:Output	file:	access:public
+Output::value	cb/allBalances.cpp	/^    int64_t value;$/;"	m	struct:Output	file:	access:public
+OutputMap	cb/sql.cpp	/^typedef GoogMap<Hash256, uint64_t, Hash256Hasher, Hash256Equal>::Map OutputMap;$/;"	t	file:
+OutputVec	cb/allBalances.cpp	/^typedef std::vector<Output> OutputVec;$/;"	t	file:
+P	cb/simpleStats.cpp	72;"	d	file:
+P	cb/simpleStats.cpp	90;"	d	file:
+PagedAllocator	util.h	/^    struct PagedAllocator$/;"	s
+PagedAllocator::alloc	util.h	/^        static uint8_t *alloc()$/;"	f	struct:PagedAllocator	access:public	signature:()
+PagedAllocator::kPageByteSize	util.h	/^        enum { kPageByteSize = sizeof(T)*kPageSize };$/;"	e	enum:PagedAllocator::__anon20
+PagedAllocator::pool	cb/allBalances.cpp	/^template<> uint8_t *PagedAllocator<Addr>::pool = 0;$/;"	m	class:PagedAllocator	file:
+PagedAllocator::pool	util.cpp	/^template<> uint8_t *PagedAllocator<Block>::pool = 0;$/;"	m	class:PagedAllocator	file:
+PagedAllocator::pool	util.cpp	/^template<> uint8_t *PagedAllocator<uint160_t>::pool = 0;$/;"	m	class:PagedAllocator	file:
+PagedAllocator::pool	util.cpp	/^template<> uint8_t *PagedAllocator<uint256_t>::pool = 0;$/;"	m	class:PagedAllocator	file:
+PagedAllocator::pool	util.h	/^        static uint8_t *pool;$/;"	m	struct:PagedAllocator	access:public
+PagedAllocator::poolEnd	cb/allBalances.cpp	/^template<> uint8_t *PagedAllocator<Addr>::poolEnd = 0;$/;"	m	class:PagedAllocator	file:
+PagedAllocator::poolEnd	util.cpp	/^template<> uint8_t *PagedAllocator<Block>::poolEnd = 0;$/;"	m	class:PagedAllocator	file:
+PagedAllocator::poolEnd	util.cpp	/^template<> uint8_t *PagedAllocator<uint160_t>::poolEnd = 0;$/;"	m	class:PagedAllocator	file:
+PagedAllocator::poolEnd	util.cpp	/^template<> uint8_t *PagedAllocator<uint256_t>::poolEnd = 0;$/;"	m	class:PagedAllocator	file:
+PagedAllocator::poolEnd	util.h	/^        static uint8_t *poolEnd;$/;"	m	struct:PagedAllocator	access:public
+Parser	callback.h	/^        typedef optparse::OptionParser Parser;$/;"	t	struct:Callback	access:public
+Pristine	cb/pristine.cpp	/^    Pristine()$/;"	f	struct:Pristine	access:public	signature:()
+Pristine	cb/pristine.cpp	/^struct Pristine:public Callback$/;"	s	file:	inherits:Callback
+Pristine::Pristine	cb/pristine.cpp	/^    Pristine()$/;"	f	struct:Pristine	access:public	signature:()
+Pristine::currBlock	cb/pristine.cpp	/^    uint64_t currBlock;$/;"	m	struct:Pristine	file:	access:public
+Pristine::currTXHash	cb/pristine.cpp	/^    const uint8_t *currTXHash;$/;"	m	struct:Pristine	file:	access:public
+Pristine::currTime	cb/pristine.cpp	/^    uint64_t currTime;$/;"	m	struct:Pristine	file:	access:public
+Pristine::edge	cb/pristine.cpp	/^    virtual void edge($/;"	f	struct:Pristine	access:public	signature:( uint64_t value, const uint8_t *upTXHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize, const uint8_t *downTXHash, uint64_t inputIndex, const uint8_t *inputScript, uint64_t inputScriptSize )
+Pristine::endInputs	cb/pristine.cpp	/^    virtual void  endInputs($/;"	f	struct:Pristine	access:public	signature:( const uint8_t *p )
+Pristine::hasGenInput	cb/pristine.cpp	/^    bool hasGenInput;$/;"	m	struct:Pristine	file:	access:public
+Pristine::init	cb/pristine.cpp	/^    virtual int init($/;"	f	struct:Pristine	access:public	signature:( int argc, const char *argv[] )
+Pristine::name	cb/pristine.cpp	/^    virtual const char                   *name() const         { return "pristine"; }$/;"	f	struct:Pristine	access:public	signature:() const
+Pristine::nbInputs	cb/pristine.cpp	/^    size_t nbInputs;$/;"	m	struct:Pristine	file:	access:public
+Pristine::nbPristine	cb/pristine.cpp	/^    uint64_t nbPristine;$/;"	m	struct:Pristine	file:	access:public
+Pristine::needTXHash	cb/pristine.cpp	/^    virtual bool                         needTXHash() const    { return true;       }$/;"	f	struct:Pristine	access:public	signature:() const
+Pristine::optionParser	cb/pristine.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;    }$/;"	f	struct:Pristine	access:public	signature:() const
+Pristine::parser	cb/pristine.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:Pristine	file:	access:public
+Pristine::startBlock	cb/pristine.cpp	/^    virtual void startBlock($/;"	f	struct:Pristine	access:public	signature:( const Block *b, uint64_t )
+Pristine::startInput	cb/pristine.cpp	/^    virtual void startInput($/;"	f	struct:Pristine	access:public	signature:( const uint8_t *p )
+Pristine::startInputs	cb/pristine.cpp	/^    virtual void startInputs($/;"	f	struct:Pristine	access:public	signature:( const uint8_t *p )
+Pristine::startTX	cb/pristine.cpp	/^    virtual void startTX($/;"	f	struct:Pristine	access:public	signature:( const uint8_t *p, const uint8_t *hash )
+Pristine::txMap	cb/pristine.cpp	/^    TxMap txMap;$/;"	m	struct:Pristine	file:	access:public
+Pristine::wrapup	cb/pristine.cpp	/^    virtual void wrapup()$/;"	f	struct:Pristine	access:public	signature:()
+RestrictMap	cb/allBalances.cpp	/^typedef GoogMap<Hash160, int, Hash160Hasher, Hash160Equal>::Map RestrictMap;$/;"	t	file:
+Rewards	cb/rewards.cpp	/^    Rewards()$/;"	f	struct:Rewards	access:public	signature:()
+Rewards	cb/rewards.cpp	/^struct Rewards:public Callback$/;"	s	file:	inherits:Callback
+Rewards::Rewards	cb/rewards.cpp	/^    Rewards()$/;"	f	struct:Rewards	access:public	signature:()
+Rewards::currBlock	cb/rewards.cpp	/^    uint64_t currBlock;$/;"	m	struct:Rewards	file:	access:public
+Rewards::currTXHash	cb/rewards.cpp	/^    const uint8_t *currTXHash;$/;"	m	struct:Rewards	file:	access:public
+Rewards::endBlock	cb/rewards.cpp	/^    virtual void endBlock($/;"	f	struct:Rewards	access:public	signature:( const Block *b )
+Rewards::endInputs	cb/rewards.cpp	/^    virtual void  endInputs(const uint8_t *p)$/;"	f	struct:Rewards	access:public	signature:(const uint8_t *p)
+Rewards::endOutput	cb/rewards.cpp	/^    virtual void endOutput($/;"	f	struct:Rewards	access:public	signature:( const uint8_t *p, uint64_t value, const uint8_t *txHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize )
+Rewards::fullDump	cb/rewards.cpp	/^    bool fullDump;$/;"	m	struct:Rewards	file:	access:public
+Rewards::hasGenInput	cb/rewards.cpp	/^    bool hasGenInput;$/;"	m	struct:Rewards	file:	access:public
+Rewards::init	cb/rewards.cpp	/^    virtual int init($/;"	f	struct:Rewards	access:public	signature:( int argc, const char *argv[] )
+Rewards::name	cb/rewards.cpp	/^    virtual const char                   *name() const         { return "rewards"; }$/;"	f	struct:Rewards	access:public	signature:() const
+Rewards::nbInputs	cb/rewards.cpp	/^    size_t nbInputs;$/;"	m	struct:Rewards	file:	access:public
+Rewards::needTXHash	cb/rewards.cpp	/^    virtual bool                         needTXHash() const    { return true;      }$/;"	f	struct:Rewards	access:public	signature:() const
+Rewards::optionParser	cb/rewards.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;   }$/;"	f	struct:Rewards	access:public	signature:() const
+Rewards::parser	cb/rewards.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:Rewards	file:	access:public
+Rewards::reward	cb/rewards.cpp	/^    uint64_t reward;$/;"	m	struct:Rewards	file:	access:public
+Rewards::startBlock	cb/rewards.cpp	/^    virtual void startBlock($/;"	f	struct:Rewards	access:public	signature:( const Block *b, uint64_t )
+Rewards::startInput	cb/rewards.cpp	/^    virtual void   startInput(const uint8_t *p)$/;"	f	struct:Rewards	access:public	signature:(const uint8_t *p)
+Rewards::startInputs	cb/rewards.cpp	/^    virtual void  startInputs(const uint8_t *p)$/;"	f	struct:Rewards	access:public	signature:(const uint8_t *p)
+Rewards::startTX	cb/rewards.cpp	/^    virtual void startTX($/;"	f	struct:Rewards	access:public	signature:( const uint8_t *p, const uint8_t *hash )
+SKIP	util.h	164;"	d
+SQLDump	cb/sql.cpp	/^    SQLDump()$/;"	f	struct:SQLDump	access:public	signature:()
+SQLDump	cb/sql.cpp	/^struct SQLDump:public Callback$/;"	s	file:	inherits:Callback
+SQLDump::SQLDump	cb/sql.cpp	/^    SQLDump()$/;"	f	struct:SQLDump	access:public	signature:()
+SQLDump::aliases	cb/sql.cpp	/^    virtual void aliases($/;"	f	struct:SQLDump	access:public	signature:( std::vector<const char*> &v ) const
+SQLDump::blkID	cb/sql.cpp	/^    uint64_t blkID;$/;"	m	struct:SQLDump	file:	access:public
+SQLDump::blockFile	cb/sql.cpp	/^    FILE *blockFile;$/;"	m	struct:SQLDump	file:	access:public
+SQLDump::cutoffBlock	cb/sql.cpp	/^    int64_t cutoffBlock;$/;"	m	struct:SQLDump	file:	access:public
+SQLDump::edge	cb/sql.cpp	/^    virtual void edge($/;"	f	struct:SQLDump	access:public	signature:( uint64_t value, const uint8_t *upTXHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize, const uint8_t *downTXHash, uint64_t inputIndex, const uint8_t *inputScript, uint64_t inputScriptSize )
+SQLDump::endOutput	cb/sql.cpp	/^    virtual void endOutput($/;"	f	struct:SQLDump	access:public	signature:( const uint8_t *p, uint64_t value, const uint8_t *txHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize )
+SQLDump::init	cb/sql.cpp	/^    virtual int init($/;"	f	struct:SQLDump	access:public	signature:( int argc, const char *argv[] )
+SQLDump::inputFile	cb/sql.cpp	/^    FILE *inputFile;$/;"	m	struct:SQLDump	file:	access:public
+SQLDump::inputID	cb/sql.cpp	/^    uint64_t inputID;$/;"	m	struct:SQLDump	file:	access:public
+SQLDump::name	cb/sql.cpp	/^    virtual const char                   *name() const         { return "sqldump"; }$/;"	f	struct:SQLDump	access:public	signature:() const
+SQLDump::needTXHash	cb/sql.cpp	/^    virtual bool                         needTXHash() const    { return true;      }$/;"	f	struct:SQLDump	access:public	signature:() const
+SQLDump::optionParser	cb/sql.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;   }$/;"	f	struct:SQLDump	access:public	signature:() const
+SQLDump::outputFile	cb/sql.cpp	/^    FILE *outputFile;$/;"	m	struct:SQLDump	file:	access:public
+SQLDump::outputID	cb/sql.cpp	/^    uint64_t outputID;$/;"	m	struct:SQLDump	file:	access:public
+SQLDump::outputMap	cb/sql.cpp	/^    OutputMap outputMap;$/;"	m	struct:SQLDump	file:	access:public
+SQLDump::parser	cb/sql.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:SQLDump	file:	access:public
+SQLDump::startBlock	cb/sql.cpp	/^    virtual void startBlock($/;"	f	struct:SQLDump	access:public	signature:( const Block *b, uint64_t )
+SQLDump::startTX	cb/sql.cpp	/^    virtual void startTX($/;"	f	struct:SQLDump	access:public	signature:( const uint8_t *p, const uint8_t *hash )
+SQLDump::txFile	cb/sql.cpp	/^    FILE *txFile;$/;"	m	struct:SQLDump	file:	access:public
+SQLDump::txID	cb/sql.cpp	/^    uint64_t txID;$/;"	m	struct:SQLDump	file:	access:public
+SQLDump::wrapup	cb/sql.cpp	/^    virtual void wrapup()$/;"	f	struct:SQLDump	access:public	signature:()
+SUPPRESS_HELP	option.h	/^const char* const SUPPRESS_HELP = "SUPPRESS" "HELP";$/;"	m	namespace:optparse
+SUPPRESS_USAGE	option.h	/^const char* const SUPPRESS_USAGE = "SUPPRESS" "USAGE";$/;"	m	namespace:optparse
+SimpleStats	cb/simpleStats.cpp	/^    SimpleStats()$/;"	f	struct:SimpleStats	access:public	signature:()
+SimpleStats	cb/simpleStats.cpp	/^struct SimpleStats:public Callback$/;"	s	file:	inherits:Callback
+SimpleStats::SimpleStats	cb/simpleStats.cpp	/^    SimpleStats()$/;"	f	struct:SimpleStats	access:public	signature:()
+SimpleStats::aliases	cb/simpleStats.cpp	/^    virtual void aliases($/;"	f	struct:SimpleStats	access:public	signature:( std::vector<const char*> &v ) const
+SimpleStats::endOutput	cb/simpleStats.cpp	/^    virtual void endOutput($/;"	f	struct:SimpleStats	access:public	signature:( const uint8_t *p, uint64_t value, const uint8_t *txHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize )
+SimpleStats::init	cb/simpleStats.cpp	/^    virtual int init($/;"	f	struct:SimpleStats	access:public	signature:( int argc, const char *argv[] )
+SimpleStats::name	cb/simpleStats.cpp	/^    virtual const char                   *name() const         { return "simpleStats"; }$/;"	f	struct:SimpleStats	access:public	signature:() const
+SimpleStats::nbBlocks	cb/simpleStats.cpp	/^    uint128_t nbBlocks;$/;"	m	struct:SimpleStats	file:	access:public
+SimpleStats::nbInputs	cb/simpleStats.cpp	/^    uint128_t nbInputs;$/;"	m	struct:SimpleStats	file:	access:public
+SimpleStats::nbMaps	cb/simpleStats.cpp	/^    uint128_t nbMaps;$/;"	m	struct:SimpleStats	file:	access:public
+SimpleStats::nbOutputs	cb/simpleStats.cpp	/^    uint128_t nbOutputs;$/;"	m	struct:SimpleStats	file:	access:public
+SimpleStats::nbTransactions	cb/simpleStats.cpp	/^    uint128_t nbTransactions;$/;"	m	struct:SimpleStats	file:	access:public
+SimpleStats::nbValidBlocks	cb/simpleStats.cpp	/^    uint128_t nbValidBlocks;$/;"	m	struct:SimpleStats	file:	access:public
+SimpleStats::needTXHash	cb/simpleStats.cpp	/^    virtual bool                         needTXHash() const    { return false;         }$/;"	f	struct:SimpleStats	access:public	signature:() const
+SimpleStats::optionParser	cb/simpleStats.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;       }$/;"	f	struct:SimpleStats	access:public	signature:() const
+SimpleStats::parser	cb/simpleStats.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:SimpleStats	file:	access:public
+SimpleStats::startBlock	cb/simpleStats.cpp	/^    virtual void   startBlock(  const Block *b, uint64_t           ) { ++nbValidBlocks; }$/;"	f	struct:SimpleStats	access:public	signature:( const Block *b, uint64_t )
+SimpleStats::startBlock	cb/simpleStats.cpp	/^    virtual void   startBlock(const uint8_t *p                     ) { ++nbBlocks;      }$/;"	f	struct:SimpleStats	access:public	signature:(const uint8_t *p )
+SimpleStats::startInput	cb/simpleStats.cpp	/^    virtual void   startInput(const uint8_t *p                     ) { ++nbInputs;      }$/;"	f	struct:SimpleStats	access:public	signature:(const uint8_t *p )
+SimpleStats::startMap	cb/simpleStats.cpp	/^    virtual void     startMap(const uint8_t *p                     ) { ++nbMaps;        }$/;"	f	struct:SimpleStats	access:public	signature:(const uint8_t *p )
+SimpleStats::startOutput	cb/simpleStats.cpp	/^    virtual void  startOutput(const uint8_t *p                     ) { ++nbOutputs;     }$/;"	f	struct:SimpleStats	access:public	signature:(const uint8_t *p )
+SimpleStats::startTX	cb/simpleStats.cpp	/^    virtual void      startTX(const uint8_t *p, const uint8_t *hash) { ++nbTransactions;}$/;"	f	struct:SimpleStats	access:public	signature:(const uint8_t *p, const uint8_t *hash)
+SimpleStats::volume	cb/simpleStats.cpp	/^    uint128_t volume;$/;"	m	struct:SimpleStats	file:	access:public
+SimpleStats::wrapup	cb/simpleStats.cpp	/^    virtual void wrapup()$/;"	f	struct:SimpleStats	access:public	signature:()
+TXMap	parser.cpp	/^typedef GoogMap<Hash256, const uint8_t*, Hash256Hasher, Hash256Equal>::Map TXMap;$/;"	t	file:
+Taint	cb/taint.cpp	/^    Taint()$/;"	f	struct:Taint	access:public	signature:()
+Taint	cb/taint.cpp	/^struct Taint:public Callback$/;"	s	file:	inherits:Callback
+Taint::Taint	cb/taint.cpp	/^    Taint()$/;"	f	struct:Taint	access:public	signature:()
+Taint::aliases	cb/taint.cpp	/^    virtual void aliases($/;"	f	struct:Taint	access:public	signature:( std::vector<const char*> &v ) const
+Taint::edge	cb/taint.cpp	/^    virtual void edge($/;"	f	struct:Taint	access:public	signature:( uint64_t value, const uint8_t *upTXHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize, const uint8_t *downTXHash, uint64_t inputIndex, const uint8_t *inputScript, uint64_t inputScriptSize )
+Taint::endTX	cb/taint.cpp	/^    virtual void endTX($/;"	f	struct:Taint	access:public	signature:( const uint8_t *p )
+Taint::init	cb/taint.cpp	/^    virtual int init($/;"	f	struct:Taint	access:public	signature:( int argc, const char *argv[] )
+Taint::name	cb/taint.cpp	/^    virtual const char                   *name() const         { return "taint"; }$/;"	f	struct:Taint	access:public	signature:() const
+Taint::needTXHash	cb/taint.cpp	/^    virtual bool                         needTXHash() const    { return true;    }$/;"	f	struct:Taint	access:public	signature:() const
+Taint::optionParser	cb/taint.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser; }$/;"	f	struct:Taint	access:public	signature:() const
+Taint::parser	cb/taint.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:Taint	file:	access:public
+Taint::rootHashes	cb/taint.cpp	/^    std::vector<uint256_t> rootHashes;$/;"	m	struct:Taint	file:	access:public
+Taint::srcTxMap	cb/taint.cpp	/^    TxMap srcTxMap;$/;"	m	struct:Taint	file:	access:public
+Taint::startTX	cb/taint.cpp	/^    virtual void startTX($/;"	f	struct:Taint	access:public	signature:( const uint8_t *p, const uint8_t *hash )
+Taint::taintMap	cb/taint.cpp	/^    TaintMap taintMap;$/;"	m	struct:Taint	file:	access:public
+Taint::threshold	cb/taint.cpp	/^    double threshold;$/;"	m	struct:Taint	file:	access:public
+Taint::txBad	cb/taint.cpp	/^    Number txBad;$/;"	m	struct:Taint	file:	access:public
+Taint::txHash	cb/taint.cpp	/^    const uint8_t *txHash;$/;"	m	struct:Taint	file:	access:public
+Taint::txTotal	cb/taint.cpp	/^    uint128_t txTotal;$/;"	m	struct:Taint	file:	access:public
+Taint::wrapup	cb/taint.cpp	/^    virtual void wrapup()$/;"	f	struct:Taint	access:public	signature:()
+TaintMap	cb/taint.cpp	/^typedef GoogMap<Hash256, Number, Hash256Hasher, Hash256Equal >::Map TaintMap;$/;"	t	file:
+Transactions	cb/transactions.cpp	/^    Transactions()$/;"	f	struct:Transactions	access:public	signature:()
+Transactions	cb/transactions.cpp	/^struct Transactions:public Callback$/;"	s	file:	inherits:Callback
+Transactions::Transactions	cb/transactions.cpp	/^    Transactions()$/;"	f	struct:Transactions	access:public	signature:()
+Transactions::addrMap	cb/transactions.cpp	/^    AddrMap addrMap;$/;"	m	struct:Transactions	file:	access:public
+Transactions::adds	cb/transactions.cpp	/^    uint64_t adds;$/;"	m	struct:Transactions	file:	access:public
+Transactions::aliases	cb/transactions.cpp	/^    virtual void aliases($/;"	f	struct:Transactions	access:public	signature:( std::vector<const char*> &v ) const
+Transactions::bTime	cb/transactions.cpp	/^    uint64_t bTime;$/;"	m	struct:Transactions	file:	access:public
+Transactions::csv	cb/transactions.cpp	/^    bool csv;$/;"	m	struct:Transactions	file:	access:public
+Transactions::edge	cb/transactions.cpp	/^    virtual void edge($/;"	f	struct:Transactions	access:public	signature:( uint64_t value, const uint8_t *upTXHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize, const uint8_t *downTXHash, uint64_t inputIndex, const uint8_t *inputScript, uint64_t inputScriptSize )
+Transactions::endOutput	cb/transactions.cpp	/^    virtual void endOutput($/;"	f	struct:Transactions	access:public	signature:( const uint8_t *p, uint64_t value, const uint8_t *txHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize )
+Transactions::init	cb/transactions.cpp	/^    virtual int init($/;"	f	struct:Transactions	access:public	signature:( int argc, const char *argv[] )
+Transactions::move	cb/transactions.cpp	/^    void move($/;"	f	struct:Transactions	access:public	signature:( const uint8_t *script, uint64_t scriptSize, const uint8_t *txHash, uint64_t value, bool add, const uint8_t *downTXHash = 0 )
+Transactions::name	cb/transactions.cpp	/^    virtual const char                   *name() const         { return "transactions"; }$/;"	f	struct:Transactions	access:public	signature:() const
+Transactions::nbTX	cb/transactions.cpp	/^    uint64_t nbTX;$/;"	m	struct:Transactions	file:	access:public
+Transactions::needTXHash	cb/transactions.cpp	/^    virtual bool                         needTXHash() const    { return true;           }$/;"	f	struct:Transactions	access:public	signature:() const
+Transactions::optionParser	cb/transactions.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;        }$/;"	f	struct:Transactions	access:public	signature:() const
+Transactions::parser	cb/transactions.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:Transactions	file:	access:public
+Transactions::rootHashes	cb/transactions.cpp	/^    std::vector<uint160_t> rootHashes;$/;"	m	struct:Transactions	file:	access:public
+Transactions::start	cb/transactions.cpp	/^    virtual void start($/;"	f	struct:Transactions	access:public	signature:( const Block *, const Block * )
+Transactions::startBlock	cb/transactions.cpp	/^    virtual void startBlock($/;"	f	struct:Transactions	access:public	signature:( const Block *b, uint64_t )
+Transactions::subs	cb/transactions.cpp	/^    uint64_t subs;$/;"	m	struct:Transactions	file:	access:public
+Transactions::sum	cb/transactions.cpp	/^    uint64_t sum;$/;"	m	struct:Transactions	file:	access:public
+Transactions::wrapup	cb/transactions.cpp	/^    virtual void wrapup()$/;"	f	struct:Transactions	access:public	signature:()
+TxMap	cb/dumpTX.cpp	/^typedef GoogMap<Hash256, int, Hash256Hasher, Hash256Equal >::Map TxMap;$/;"	t	file:
+TxMap	cb/pristine.cpp	/^typedef GoogMap<Hash256, uint64_t, Hash256Hasher, Hash256Equal >::Map TxMap;$/;"	t	file:
+TxMap	cb/taint.cpp	/^typedef GoogMap<Hash256, int, Hash256Hasher, Hash256Equal >::Map TxMap;$/;"	t	file:
+VERSION_PAY_TO_HASH	cb/sql.cpp	12;"	d	file:
+Value	option.h	/^    Value() : str(), valid(false) {}$/;"	f	class:optparse::Value	access:public	signature:()
+Value	option.h	/^    Value(const std::string& v) : str(v), valid(true) {}$/;"	f	class:optparse::Value	access:public	signature:(const std::string& v)
+Value	option.h	/^class Value {$/;"	c	namespace:optparse
+Values	option.h	/^    Values() : _map() {}$/;"	f	class:optparse::Values	access:public	signature:()
+Values	option.h	/^class Values {$/;"	c	namespace:optparse
+WANT_DENSE	util.h	98;"	d
+_	option.cpp	17;"	d	file:
+_	option.cpp	19;"	d	file:
+__CALLBACK_H__	callback.h	2;"	d
+__COMMON_H__	common.h	2;"	d
+__ERRLOG_H__	errlog.h	2;"	d
+__OPCODE_H__	opcodes.h	2;"	d
+__RMD160_H__	rmd160.h	2;"	d
+__SHA256_H__	sha256.h	2;"	d
+__STDC_FORMAT_MACROS	common.h	5;"	d
+__UTIL_H__	util.h	2;"	d
+_action	option.h	/^    std::string _action;$/;"	m	class:optparse::Option	access:private
+_add_help_option	option.h	/^    bool _add_help_option;$/;"	m	class:optparse::OptionParser	access:private
+_add_version_option	option.h	/^    bool _add_version_option;$/;"	m	class:optparse::OptionParser	access:private
+_appendMap	option.h	/^    lstMap _appendMap;$/;"	m	class:optparse::Values	access:private
+_callback	option.h	/^    Callback* _callback;$/;"	m	class:optparse::Option	access:private
+_choices	option.h	/^    std::list<std::string> _choices;$/;"	m	class:optparse::Option	access:private
+_const	option.h	/^    std::string _const;$/;"	m	class:optparse::Option	access:private
+_default	option.h	/^    std::string _default;$/;"	m	class:optparse::Option	access:private
+_defaults	option.h	/^    strMap _defaults;$/;"	m	class:optparse::OptionParser	access:private
+_description	option.h	/^    std::string _description;$/;"	m	class:optparse::OptionParser	access:private
+_dest	option.h	/^    std::string _dest;$/;"	m	class:optparse::Option	access:private
+_epilog	option.h	/^    std::string _epilog;$/;"	m	class:optparse::OptionParser	access:private
+_group_description	option.h	/^    std::string _group_description;$/;"	m	class:optparse::OptionGroup	access:private
+_groups	option.h	/^    std::list<OptionGroup const*> _groups;$/;"	m	class:optparse::OptionParser	access:private
+_help	option.h	/^    std::string _help;$/;"	m	class:optparse::Option	access:private
+_interspersed_args	option.h	/^    bool _interspersed_args;$/;"	m	class:optparse::OptionParser	access:private
+_leftover	option.h	/^    std::list<std::string> _leftover;$/;"	m	class:optparse::OptionParser	access:private
+_long_opts	option.h	/^    std::set<std::string> _long_opts;$/;"	m	class:optparse::Option	access:private
+_map	option.h	/^    strMap _map;$/;"	m	class:optparse::Values	access:private
+_metavar	option.h	/^    std::string _metavar;$/;"	m	class:optparse::Option	access:private
+_nargs	option.h	/^    size_t _nargs;$/;"	m	class:optparse::Option	access:private
+_optmap_l	option.h	/^    optMap _optmap_l;$/;"	m	class:optparse::OptionParser	access:private
+_optmap_s	option.h	/^    optMap _optmap_s;$/;"	m	class:optparse::OptionParser	access:private
+_opts	option.h	/^    std::list<Option> _opts;$/;"	m	class:optparse::OptionParser	access:private
+_parser	option.h	/^    const OptionParser& _parser;$/;"	m	class:optparse::OptionGroup	access:private
+_prog	option.h	/^    std::string _prog;$/;"	m	class:optparse::OptionParser	access:private
+_remaining	option.h	/^    std::list<std::string> _remaining;$/;"	m	class:optparse::OptionParser	access:private
+_short_opts	option.h	/^    std::set<std::string> _short_opts;$/;"	m	class:optparse::Option	access:private
+_title	option.h	/^    std::string _title;$/;"	m	class:optparse::OptionGroup	access:private
+_type	option.h	/^    std::string _type;$/;"	m	class:optparse::Option	access:private
+_usage	option.h	/^    std::string _usage;$/;"	m	class:optparse::OptionParser	access:private
+_userSet	option.h	/^    std::set<std::string> _userSet;$/;"	m	class:optparse::Values	access:private
+_values	option.h	/^    Values _values;$/;"	m	class:optparse::OptionParser	access:private
+_version	option.h	/^    std::string _version;$/;"	m	class:optparse::OptionParser	access:private
+action	option.cpp	/^Option& Option::action(const string& a) {$/;"	f	class:optparse::Option	signature:(const string& a)
+action	option.h	/^    Option& action(const std::string& a);$/;"	p	class:optparse::Option	access:public	signature:(const std::string& a)
+action	option.h	/^    const std::string& action() const { return _action; }$/;"	f	class:optparse::Option	access:public	signature:() const
+addAddr	util.cpp	/^static bool addAddr($/;"	f	file:	signature:( std::vector<uint160_t> &result, const uint8_t *buf, bool verbose )
+add_help_option	option.h	/^    OptionParser& add_help_option(bool h) { _add_help_option = h; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(bool h)
+add_help_option	option.h	/^    bool add_help_option() const { return _add_help_option; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+add_option	option.cpp	/^Option& OptionParser::add_option(const string& opt) {$/;"	f	class:optparse::OptionParser	signature:(const string& opt)
+add_option	option.cpp	/^Option& OptionParser::add_option(const string& opt1, const string& opt2) {$/;"	f	class:optparse::OptionParser	signature:(const string& opt1, const string& opt2)
+add_option	option.cpp	/^Option& OptionParser::add_option(const string& opt1, const string& opt2, const string& opt3) {$/;"	f	class:optparse::OptionParser	signature:(const string& opt1, const string& opt2, const string& opt3)
+add_option	option.cpp	/^Option& OptionParser::add_option(const vector<string>& v) {$/;"	f	class:optparse::OptionParser	signature:(const vector<string>& v)
+add_option	option.h	/^    Option& add_option(const std::string& opt);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& opt)
+add_option	option.h	/^    Option& add_option(const std::string& opt1, const std::string& opt2);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& opt1, const std::string& opt2)
+add_option	option.h	/^    Option& add_option(const std::string& opt1, const std::string& opt2, const std::string& opt3);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& opt1, const std::string& opt2, const std::string& opt3)
+add_option	option.h	/^    Option& add_option(const std::vector<std::string>& opt);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::vector<std::string>& opt)
+add_option_group	option.cpp	/^OptionParser& OptionParser::add_option_group(const OptionGroup& group) {$/;"	f	class:optparse::OptionParser	signature:(const OptionGroup& group)
+add_option_group	option.h	/^    OptionParser& add_option_group(const OptionGroup& group);$/;"	p	class:optparse::OptionParser	access:public	signature:(const OptionGroup& group)
+add_version_option	option.h	/^    OptionParser& add_version_option(bool v) { _add_version_option = v; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(bool v)
+add_version_option	option.h	/^    bool add_version_option() const { return _add_version_option; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+addrMap	cb/allBalances.cpp	/^    AddrMap addrMap;$/;"	m	struct:AllBalances	file:	access:public
+addrMap	cb/closure.cpp	/^    AddrMap addrMap;$/;"	m	struct:Closure	file:	access:public
+addrMap	cb/transactions.cpp	/^    AddrMap addrMap;$/;"	m	struct:Transactions	file:	access:public
+addrToHash160	util.cpp	/^bool addrToHash160($/;"	f	signature:( uint8_t *hash160, const uint8_t *addr, bool checkHash, bool verbose )
+addrToHash160	util.h	/^    bool addrToHash160($/;"	p	signature:( uint8_t *hash160, const uint8_t *addr, bool checkHash = false, bool verbose = true )
+adds	cb/transactions.cpp	/^    uint64_t adds;$/;"	m	struct:Transactions	file:	access:public
+aliases	callback.h	/^        virtual void               aliases(std::vector<const char *> &v) const {               } \/\/ Alternate names for callback$/;"	f	struct:Callback	access:public	signature:(std::vector<const char *> &v) const
+aliases	cb/allBalances.cpp	/^    virtual void aliases($/;"	f	struct:AllBalances	access:public	signature:( std::vector<const char*> &v ) const
+aliases	cb/closure.cpp	/^    virtual void aliases($/;"	f	struct:Closure	access:public	signature:( std::vector<const char*> &v ) const
+aliases	cb/dumpTX.cpp	/^    virtual void aliases($/;"	f	struct:DumpTX	access:public	signature:( std::vector<const char*> &v ) const
+aliases	cb/help.cpp	/^    virtual void aliases($/;"	f	struct:Help	access:public	signature:( std::vector<const char*> &v ) const
+aliases	cb/simpleStats.cpp	/^    virtual void aliases($/;"	f	struct:SimpleStats	access:public	signature:( std::vector<const char*> &v ) const
+aliases	cb/sql.cpp	/^    virtual void aliases($/;"	f	struct:SQLDump	access:public	signature:( std::vector<const char*> &v ) const
+aliases	cb/taint.cpp	/^    virtual void aliases($/;"	f	struct:Taint	access:public	signature:( std::vector<const char*> &v ) const
+aliases	cb/transactions.cpp	/^    virtual void aliases($/;"	f	struct:Transactions	access:public	signature:( std::vector<const char*> &v ) const
+all	option.h	/^    const std::list<std::string>& all(const std::string& d) const { return _appendMap.find(d)->second; }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d) const
+all	option.h	/^    std::list<std::string>& all(const std::string& d) { return _appendMap[d]; }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d)
+allAddrs	cb/allBalances.cpp	/^    std::vector<Addr*> allAddrs;$/;"	m	struct:AllBalances	file:	access:public
+allAddrs	cb/closure.cpp	/^    std::vector<Addr*> allAddrs;$/;"	m	struct:Closure	file:	access:public
+allBalances	cb/allBalances.cpp	/^static AllBalances allBalances;$/;"	v	file:
+allback$	tags	/^Callback::aliases	callback.h	\/^        virtual void               aliases(std::vector<const char *> &v) const {               } \\\/\\\/ Alternate names for callback$\/;"	f	struct:Callback	access:public	signature:(std::vector<const char *> &v) const$/;"	v	typeref:struct:__anon1
+alloc	util.h	/^        static uint8_t *alloc()$/;"	f	struct:PagedAllocator	access:public	signature:()
+allocAddr	cb/allBalances.cpp	/^static inline Addr *allocAddr() { return (Addr*)PagedAllocator<Addr>::alloc(); }$/;"	f	file:	signature:()
+allocBlock	util.h	/^    static inline Block   *allocBlock()   { return (Block*)PagedAllocator<    Block>::alloc(); }$/;"	f	signature:()
+allocHash160	util.h	/^    static inline uint8_t *allocHash160() { return         PagedAllocator<uint160_t>::alloc(); }$/;"	f	signature:()
+allocHash256	util.h	/^    static inline uint8_t *allocHash256() { return         PagedAllocator<uint256_t>::alloc(); }$/;"	f	signature:()
+args	option.h	/^    const std::list<std::string>& args() const { return _leftover; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+args	option.h	/^    std::vector<std::string> args() {$/;"	f	class:optparse::OptionParser	access:public	signature:()
+arguments$	tags	/^Callback::init	callback.h	\/^        virtual int                   init(int argc, const char *argv[])       { return 0;     } \\\/\\\/ Called after callback construction, with command line arguments$\/;"	f	struct:Callback	access:public	signature:(int argc, const char *argv[])$/;"	v	typeref:struct:__anon2
+b58Digits	util.cpp	/^const uint8_t b58Digits[] = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";$/;"	v
+bTime	cb/dumpTX.cpp	/^    uint64_t bTime;$/;"	m	struct:DumpTX	file:	access:public
+bTime	cb/transactions.cpp	/^    uint64_t bTime;$/;"	m	struct:Transactions	file:	access:public
+basename	option.cpp	/^static string basename(const string& s) {$/;"	f	namespace:optparse	signature:(const string& s)
+blkID	cb/sql.cpp	/^    uint64_t blkID;$/;"	m	struct:SQLDump	file:	access:public
+blockFile	cb/sql.cpp	/^    FILE *blockFile;$/;"	m	struct:SQLDump	file:	access:public
+blockTime	cb/allBalances.cpp	/^    uint32_t blockTime;$/;"	m	struct:AllBalances	file:	access:public
+buildAllBlocks	parser.cpp	/^static void buildAllBlocks()$/;"	f	file:	signature:()
+buildBlock	parser.cpp	/^static bool buildBlock($/;"	f	file:	signature:( const uint8_t *&p, const uint8_t *e )
+buildNullBlock	parser.cpp	/^static void buildNullBlock()$/;"	f	file:	signature:()
+callback	option.h	/^    Callback* callback() const { return _callback; }$/;"	f	class:optparse::Option	access:public	signature:() const
+callback	option.h	/^    Option& callback(Callback& c) { _callback = &c; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(Callback& c)
+callbacks	callback.cpp	/^static std::vector<Callback*> *callbacks;$/;"	v	file:
+canonicalHexDump	cb/dumpTX.cpp	/^    static void canonicalHexDump($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p, size_t size, const char *indent )
+check_type	option.cpp	/^string Option::check_type(const string& opt, const string& val) const {$/;"	f	class:optparse::Option	signature:(const string& opt, const string& val) const
+check_type	option.h	/^    std::string check_type(const std::string& opt, const std::string& val) const;$/;"	p	class:optparse::Option	access:private	signature:(const std::string& opt, const std::string& val) const
+choices	option.h	/^    Option& choices(InputIterator begin, InputIterator end) {$/;"	f	class:optparse::Option	access:public	signature:(InputIterator begin, InputIterator end)
+choices	option.h	/^    const std::list<std::string>& choices() const { return _choices; }$/;"	f	class:optparse::Option	access:public	signature:() const
+cleanMaps	parser.cpp	/^static void cleanMaps()$/;"	f	file:	signature:()
+closure	cb/closure.cpp	/^static Closure closure;$/;"	v	file:
+cols	option.cpp	/^static unsigned int cols() {$/;"	f	namespace:optparse	signature:()
+compressPublicKey	util.cpp	/^bool compressPublicKey($/;"	f	signature:( uint8_t *result, const uint8_t *decompressedKey )
+compressPublicKey	util.h	/^    bool compressPublicKey($/;"	p	signature:( uint8_t *result, const uint8_t *decompressedKey )
+const_iterator	option.h	/^    typedef std::list<std::string>::const_iterator const_iterator;$/;"	t	class:optparse::Values	access:public
+construction	tags	/^Callback::init	callback.h	\/^        virtual int                   init(int argc, const char *argv[])       { return 0;     } \\\/\\\/ Called after callback construction, with command line arguments$\/;"	f	struct:Callback	access:public	signature:(int argc, const char *argv[])$/;"	v	typeref:struct:__anon2
+csv	cb/transactions.cpp	/^    bool csv;$/;"	m	struct:Transactions	file:	access:public
+curBlock	cb/allBalances.cpp	/^    const Block *curBlock;$/;"	m	struct:AllBalances	file:	access:public
+currBlock	cb/dumpTX.cpp	/^    uint64_t currBlock;$/;"	m	struct:DumpTX	file:	access:public
+currBlock	cb/pristine.cpp	/^    uint64_t currBlock;$/;"	m	struct:Pristine	file:	access:public
+currBlock	cb/rewards.cpp	/^    uint64_t currBlock;$/;"	m	struct:Rewards	file:	access:public
+currTXHash	cb/pristine.cpp	/^    const uint8_t *currTXHash;$/;"	m	struct:Pristine	file:	access:public
+currTXHash	cb/rewards.cpp	/^    const uint8_t *currTXHash;$/;"	m	struct:Rewards	file:	access:public
+currTime	cb/pristine.cpp	/^    uint64_t currTime;$/;"	m	struct:Pristine	file:	access:public
+cutoffBlock	cb/allBalances.cpp	/^    int64_t cutoffBlock;$/;"	m	struct:AllBalances	file:	access:public
+cutoffBlock	cb/sql.cpp	/^    int64_t cutoffBlock;$/;"	m	struct:SQLDump	file:	access:public
+data	util.h	/^        const uint8_t *data;$/;"	m	struct:Block	access:public
+decompressPublicKey	util.cpp	/^bool decompressPublicKey($/;"	f	signature:( uint8_t *result, const uint8_t *compressedKey )
+decompressPublicKey	util.h	/^    bool decompressPublicKey($/;"	p	signature:( uint8_t *result, const uint8_t *compressedKey )
+description	option.h	/^    OptionParser& description(const std::string& d) { _description = d; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& d)
+description	option.h	/^    const std::string& description() const { return _description; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+dest	option.h	/^    Option& dest(const std::string& d) { _dest = d; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& d)
+dest	option.h	/^    const std::string& dest() const { return _dest; }$/;"	f	class:optparse::Option	access:public	signature:() const
+detailed	cb/allBalances.cpp	/^    bool detailed;$/;"	m	struct:AllBalances	file:	access:public
+disable_interspersed_args	option.h	/^    OptionParser& disable_interspersed_args() { _interspersed_args = false; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:()
+downTXHash	cb/allBalances.cpp	/^    const uint8_t *downTXHash;$/;"	m	struct:Output	file:	access:public
+dump	cb/dumpTX.cpp	/^    bool dump;$/;"	m	struct:DumpTX	file:	access:public
+dumpTX	cb/dumpTX.cpp	/^static DumpTX dumpTX;$/;"	v	file:
+edge	callback.h	/^        virtual void edge($/;"	f	struct:Callback	access:public	signature:( uint64_t value, const uint8_t *upTXHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize, const uint8_t *downTXHash, uint64_t inputIndex, const uint8_t *inputScript, uint64_t inputScriptSize )
+edge	cb/allBalances.cpp	/^    virtual void edge($/;"	f	struct:AllBalances	access:public	signature:( uint64_t value, const uint8_t *upTXHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize, const uint8_t *downTXHash, uint64_t inputIndex, const uint8_t *inputScript, uint64_t inputScriptSize )
+edge	cb/closure.cpp	/^    virtual void edge($/;"	f	struct:Closure	access:public	signature:( uint64_t value, const uint8_t *upTXHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize, const uint8_t *downTXHash, uint64_t inputIndex, const uint8_t *inputScript, uint64_t inputScriptSize )
+edge	cb/dumpTX.cpp	/^    virtual void edge($/;"	f	struct:DumpTX	access:public	signature:( uint64_t value, const uint8_t *upTXHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize, const uint8_t *downTXHash, uint64_t inputIndex, const uint8_t *inputScript, uint64_t inputScriptSize )
+edge	cb/pristine.cpp	/^    virtual void edge($/;"	f	struct:Pristine	access:public	signature:( uint64_t value, const uint8_t *upTXHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize, const uint8_t *downTXHash, uint64_t inputIndex, const uint8_t *inputScript, uint64_t inputScriptSize )
+edge	cb/sql.cpp	/^    virtual void edge($/;"	f	struct:SQLDump	access:public	signature:( uint64_t value, const uint8_t *upTXHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize, const uint8_t *downTXHash, uint64_t inputIndex, const uint8_t *inputScript, uint64_t inputScriptSize )
+edge	cb/taint.cpp	/^    virtual void edge($/;"	f	struct:Taint	access:public	signature:( uint64_t value, const uint8_t *upTXHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize, const uint8_t *downTXHash, uint64_t inputIndex, const uint8_t *inputScript, uint64_t inputScriptSize )
+edge	cb/transactions.cpp	/^    virtual void edge($/;"	f	struct:Transactions	access:public	signature:( uint64_t value, const uint8_t *upTXHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize, const uint8_t *downTXHash, uint64_t inputIndex, const uint8_t *inputScript, uint64_t inputScriptSize )
+edge	parser.cpp	/^static inline void edge($/;"	f	file:	signature:( uint64_t value, const uint8_t *upTXHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize, const uint8_t *downTXHash, uint64_t inputIndex, const uint8_t *inputScript, uint64_t inputScriptSize )
+empty	cb/sql.cpp	/^static uint8_t empty[kSHA256ByteSize] = { 0x42 };$/;"	v	file:
+empty	parser.cpp	/^static uint8_t empty[kSHA256ByteSize] = { 0x42 };$/;"	v	file:
+emptyKey	cb/allBalances.cpp	/^static uint8_t emptyKey[kSHA256ByteSize] = { 0x52 };$/;"	v	file:
+emptyKey	cb/transactions.cpp	/^static uint8_t emptyKey[kRIPEMD160ByteSize] = { 0x52 };$/;"	v	file:
+enable_interspersed_args	option.h	/^    OptionParser& enable_interspersed_args() { _interspersed_args = true; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:()
+encountered$	tags	/^Callback::endTX	callback.h	\/^        virtual void        endTX(const uint8_t *p                     )       {               }  \\\/\\\/ Called when an end of TX is encountered$\/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )$/;"	v	typeref:struct:__anon10
+encountered$	tags	/^Callback::startTX	callback.h	\/^        virtual void      startTX(const uint8_t *p, const uint8_t *hash)       {               }  \\\/\\\/ Called when a new TX is encountered$\/;"	f	struct:Callback	access:public	signature:(const uint8_t *p, const uint8_t *hash)$/;"	v	typeref:struct:__anon9
+encountered$	tags	/^endBlock	callback.h	\/^        virtual void     endBlock(  const Block *b                     )       {               }  \\\/\\\/ Called when an end of block is encountered$\/;"	f	struct:Callback	access:public	signature:( const Block *b )$/;"	v	typeref:struct:__anon15
+encountered$	tags	/^startBlock	callback.h	\/^        virtual void   startBlock(  const Block *b, uint64_t chainSize )       {               }  \\\/\\\/ Called when a new block is encountered$\/;"	f	struct:Callback	access:public	signature:( const Block *b, uint64_t chainSize )$/;"	v	typeref:struct:__anon14
+encountered$	tags	/^startInput	callback.h	\/^        virtual void   startInput(const uint8_t *p                     )       {               }  \\\/\\\/ Called when a TX input is encountered$\/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )$/;"	v
+encountered$	tags	/^startOutput	callback.h	\/^        virtual void  startOutput(const uint8_t *p                     )       {               }  \\\/\\\/ Called when a TX output is encountered$\/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )$/;"	v
+endBlock	callback.h	/^        virtual void     endBlock(  const Block *b                     )       {               }  \/\/ Called when an end of block is encountered$/;"	f	struct:Callback	access:public	signature:( const Block *b )
+endBlock	callback.h	/^        virtual void     endBlock(const uint8_t *p                     )       {               }  \/\/ Called when an end of block is encountered during first pass$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+endBlock	cb/rewards.cpp	/^    virtual void endBlock($/;"	f	struct:Rewards	access:public	signature:( const Block *b )
+endBlock	parser.cpp	/^    static inline void     endBlock(const uint8_t *p)                      { DO(gCallback->endBlock(p));      }$/;"	f	file:	signature:(const uint8_t *p)
+endBlock	parser.cpp	/^static inline void       endBlock(const Block *b) { gCallback->endBlock(b);               }$/;"	f	file:	signature:(const Block *b)
+endBlock	tags	/^endBlock	parser.cpp	\/^    static inline void     endBlock(const uint8_t *p)                      { DO(gCallback->endBlock(p));      }$\/;"	f	file:	signature:(const uint8_t *p)$/;"	f	file:	signature:(const uint8_t *p)
+endInput	callback.h	/^        virtual void     endInput(const uint8_t *p                     )       {               }  \/\/ Called when at the end of a TX input$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+endInput	cb/dumpTX.cpp	/^    virtual void endInput($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p )
+endInput	parser.cpp	/^    static inline void     endInput(const uint8_t *p)                      { DO(gCallback->endInput(p));      }$/;"	f	file:	signature:(const uint8_t *p)
+endInput	tags	/^endInput	parser.cpp	\/^    static inline void     endInput(const uint8_t *p)                      { DO(gCallback->endInput(p));      }$\/;"	f	file:	signature:(const uint8_t *p)$/;"	f	file:	signature:(const uint8_t *p)
+endInputs	callback.h	/^        virtual void    endInputs(const uint8_t *p                     )       {               }  \/\/ Called when the end of a TX's input array is encountered$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+endInputs	cb/dumpTX.cpp	/^    virtual void endInputs($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p )
+endInputs	cb/pristine.cpp	/^    virtual void  endInputs($/;"	f	struct:Pristine	access:public	signature:( const uint8_t *p )
+endInputs	cb/rewards.cpp	/^    virtual void  endInputs(const uint8_t *p)$/;"	f	struct:Rewards	access:public	signature:(const uint8_t *p)
+endInputs	parser.cpp	/^    static inline void    endInputs(const uint8_t *p)                      { DO(gCallback->endInputs(p));     }$/;"	f	file:	signature:(const uint8_t *p)
+endInputs	tags	/^Callback::endInputs	callback.h	\/^        virtual void    endInputs(const uint8_t *p                     )       {               }  \\\/\\\/ Called when the end of a TX's input array is encountered$\/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )$/;"	f	signature:(const uint8_t *p )
+endInputs	tags	/^endInputs	callback.h	\/^        virtual void    endInputs(const uint8_t *p                     )       {               }  \\\/\\\/ Called when the end of a TX's input array is encountered$\/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )$/;"	f	signature:(const uint8_t *p )
+endInputs	tags	/^endInputs	parser.cpp	\/^    static inline void    endInputs(const uint8_t *p)                      { DO(gCallback->endInputs(p));     }$\/;"	f	file:	signature:(const uint8_t *p)$/;"	f	file:	signature:(const uint8_t *p)
+endMap	callback.h	/^        virtual void       endMap(const uint8_t *p                     )       {               }  \/\/ Called when a blockchain file is unmapped from memory$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+endMap	parser.cpp	/^static inline void       endMap(const uint8_t *p) { gCallback->endMap(p);                 }$/;"	f	file:	signature:(const uint8_t *p)
+endOutput	callback.h	/^        virtual void endOutput($/;"	f	struct:Callback	access:public	signature:( const uint8_t *p, uint64_t value, const uint8_t *txHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize )
+endOutput	cb/allBalances.cpp	/^    virtual void endOutput($/;"	f	struct:AllBalances	access:public	signature:( const uint8_t *p, uint64_t value, const uint8_t *txHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize )
+endOutput	cb/dumpTX.cpp	/^    virtual void endOutput($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p, uint64_t value, const uint8_t *txHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize )
+endOutput	cb/rewards.cpp	/^    virtual void endOutput($/;"	f	struct:Rewards	access:public	signature:( const uint8_t *p, uint64_t value, const uint8_t *txHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize )
+endOutput	cb/simpleStats.cpp	/^    virtual void endOutput($/;"	f	struct:SimpleStats	access:public	signature:( const uint8_t *p, uint64_t value, const uint8_t *txHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize )
+endOutput	cb/sql.cpp	/^    virtual void endOutput($/;"	f	struct:SQLDump	access:public	signature:( const uint8_t *p, uint64_t value, const uint8_t *txHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize )
+endOutput	cb/transactions.cpp	/^    virtual void endOutput($/;"	f	struct:Transactions	access:public	signature:( const uint8_t *p, uint64_t value, const uint8_t *txHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize )
+endOutput	parser.cpp	/^static inline void endOutput($/;"	f	file:	signature:( const uint8_t *p, uint64_t value, const uint8_t *txHash, uint64_t outputIndex, const uint8_t *outputScript, uint64_t outputScriptSize )
+endOutputs	callback.h	/^        virtual void   endOutputs(const uint8_t *p                     )       {               }  \/\/ Called when the end of a TX's output array is encountered$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+endOutputs	cb/dumpTX.cpp	/^    virtual void endOutputs($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p )
+endOutputs	parser.cpp	/^    static inline void   endOutputs(const uint8_t *p)                      { DO(gCallback->endOutputs(p));    }$/;"	f	file:	signature:(const uint8_t *p)
+endOutputs	tags	/^Callback::endOutputs	callback.h	\/^        virtual void   endOutputs(const uint8_t *p                     )       {               }  \\\/\\\/ Called when the end of a TX's output array is encountered$\/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )$/;"	f	signature:(const uint8_t *p )
+endOutputs	tags	/^endOutputs	callback.h	\/^        virtual void   endOutputs(const uint8_t *p                     )       {               }  \\\/\\\/ Called when the end of a TX's output array is encountered$\/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )$/;"	f	signature:(const uint8_t *p )
+endOutputs	tags	/^endOutputs	parser.cpp	\/^    static inline void   endOutputs(const uint8_t *p)                      { DO(gCallback->endOutputs(p));    }$\/;"	f	file:	signature:(const uint8_t *p)$/;"	f	file:	signature:(const uint8_t *p)
+endTX	callback.h	/^        virtual void        endTX(const uint8_t *p                     )       {               }  \/\/ Called when an end of TX is encountered$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+endTX	cb/closure.cpp	/^    virtual void endTX($/;"	f	struct:Closure	access:public	signature:( const uint8_t *p )
+endTX	cb/dumpTX.cpp	/^    virtual void endTX($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p )
+endTX	cb/taint.cpp	/^    virtual void endTX($/;"	f	struct:Taint	access:public	signature:( const uint8_t *p )
+endTX	parser.cpp	/^    static inline void        endTX(const uint8_t *p)                      { DO(gCallback->endTX(p));         }$/;"	f	file:	signature:(const uint8_t *p)
+endTX	tags	/^endTX	parser.cpp	\/^    static inline void        endTX(const uint8_t *p)                      { DO(gCallback->endTX(p));         }$\/;"	f	file:	signature:(const uint8_t *p)$/;"	f	file:	signature:(const uint8_t *p)
+epilog	option.h	/^    OptionParser& epilog(const std::string& e) { _epilog = e; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& e)
+epilog	option.h	/^    const std::string& epilog() const { return _epilog; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+errFatal	errlog.h	/^    static inline void errFatal($/;"	f	signature:( const char *format, ... )
+error	option.cpp	/^void OptionParser::error(const string& msg) const {$/;"	f	class:optparse::OptionParser	signature:(const string& msg) const
+error	option.h	/^    void error(const std::string& msg) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& msg) const
+exit	option.cpp	/^void OptionParser::exit() const {$/;"	f	class:optparse::OptionParser	signature:() const
+exit	option.h	/^    void exit() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+fd	parser.cpp	/^    int fd;$/;"	m	struct:Map	file:	access:public
+find	callback.cpp	/^Callback *Callback::find($/;"	f	class:Callback	signature:( const char *name, bool printList )
+find	callback.h	/^        static Callback *find(const char *name, bool printList=false);$/;"	p	struct:Callback	access:public	signature:(const char *name, bool printList=false)
+findLongestChain	parser.cpp	/^static void findLongestChain()$/;"	f	file:	signature:()
+firstBlock	cb/allBalances.cpp	/^    const Block *firstBlock;$/;"	m	struct:AllBalances	file:	access:public
+firstPass	parser.cpp	/^static void firstPass()$/;"	f	file:	signature:()
+format	tags	/^!_TAG_FILE_FORMAT	2	\/extended format; --format=1 will not append ;" to lines\/$/;"	v
+format_help	option.cpp	/^string Option::format_help(unsigned int indent \/* = 2 *\/) const {$/;"	f	class:optparse::Option	signature:(unsigned int indent ) const
+format_help	option.cpp	/^string OptionParser::format_help(unsigned int indent \/* = 4 *\/) const {$/;"	f	class:optparse::OptionParser	signature:(unsigned int indent ) const
+format_help	option.h	/^    std::string format_help(unsigned int indent = 2) const;$/;"	p	class:optparse::Option	access:private	signature:(unsigned int indent = 2) const
+format_help	option.h	/^    std::string format_help(unsigned int indent = 4) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(unsigned int indent = 4) const
+format_option_help	option.cpp	/^string Option::format_option_help(unsigned int indent \/* = 2 *\/) const {$/;"	f	class:optparse::Option	signature:(unsigned int indent ) const
+format_option_help	option.cpp	/^string OptionParser::format_option_help(unsigned int indent \/* = 2 *\/) const {$/;"	f	class:optparse::OptionParser	signature:(unsigned int indent ) const
+format_option_help	option.h	/^    std::string format_option_help(unsigned int indent = 2) const;$/;"	p	class:optparse::Option	access:private	signature:(unsigned int indent = 2) const
+format_option_help	option.h	/^    std::string format_option_help(unsigned int indent = 2) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(unsigned int indent = 2) const
+format_usage	option.cpp	/^string OptionParser::format_usage(const string& u) const {$/;"	f	class:optparse::OptionParser	signature:(const string& u) const
+format_usage	option.h	/^    std::string format_usage(const std::string& u) const;$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& u) const
+fromB58Digit	util.cpp	/^uint8_t fromB58Digit($/;"	f	signature:( uint8_t digit, bool abortOnErr )
+fromB58Digit	util.h	/^    uint8_t fromB58Digit($/;"	p	signature:( uint8_t digit, bool abortOnErr = true )
+fromHex	util.cpp	/^bool fromHex($/;"	f	signature:( uint8_t *dst, const uint8_t *src, size_t dstSize, bool rev, bool abortOnErr )
+fromHex	util.h	/^    bool fromHex($/;"	p	signature:( uint8_t *dst, const uint8_t *src, size_t dstSize = kSHA256ByteSize, bool rev = true, bool abortOnErr = true )
+fromHexDigit	util.cpp	/^uint8_t fromHexDigit($/;"	f	signature:( uint8_t h, bool abortOnErr )
+fromHexDigit	util.h	/^    uint8_t fromHexDigit($/;"	p	signature:( uint8_t h, bool abortOnErr = true )
+fullDump	cb/rewards.cpp	/^    bool fullDump;$/;"	m	struct:Rewards	file:	access:public
+gBlockMap	parser.cpp	/^static BlockMap gBlockMap;$/;"	v	file:
+gCallback	parser.cpp	/^static Callback *gCallback;$/;"	v	file:
+gChainSize	parser.cpp	/^static uint64_t gChainSize;$/;"	v	file:
+gCurMap	parser.cpp	/^static const Map *gCurMap;$/;"	v	file:
+gEmptyKey	cb/closure.cpp	/^static uint8_t gEmptyKey[kRIPEMD160ByteSize] = { 0x52 };$/;"	v	file:
+gMaxBlock	parser.cpp	/^static Block *gMaxBlock;$/;"	v	file:
+gMaxHeight	parser.cpp	/^static uint64_t gMaxHeight;$/;"	v	file:
+gMaxHeight	tags	/^gMaxHeight	parser.cpp	\/^static uint64_t gMaxHeight;$\/;"	v	file:$/;"	v	file:
+gNeedTXHash	parser.cpp	/^static bool gNeedTXHash;$/;"	v	file:
+gNullBlock	parser.cpp	/^static Block *gNullBlock;$/;"	v	file:
+gNullBlock	tags	/^gNullBlock	parser.cpp	\/^static Block *gNullBlock;$\/;"	v	file:$/;"	v	file:
+gNullHash	parser.cpp	/^static uint256_t gNullHash;$/;"	v	file:
+gTXMap	parser.cpp	/^static TXMap gTXMap;$/;"	v	file:
+get	option.h	/^    Value get(const std::string& d) const { return (is_set(d)) ? Value((*this)[d]) : Value(); }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d) const
+getBaseReward	util.cpp	/^uint64_t getBaseReward($/;"	f	signature:( uint64_t h )
+getBaseReward	util.h	/^    uint64_t getBaseReward($/;"	p	signature:( uint64_t h )
+getOpcodeName	opcodes.cpp	/^const char *getOpcodeName($/;"	f	signature:( uint8_t op )
+getOpcodeName	opcodes.h	/^    const char *getOpcodeName(uint8_t op);$/;"	p	signature:(uint8_t op)
+get_const	option.h	/^    const std::string& get_const() const { return _const; }$/;"	f	class:optparse::Option	access:public	signature:() const
+get_default	option.h	/^    const std::string& get_default() const { return _default; }$/;"	f	class:optparse::Option	access:public	signature:() const
+get_usage	option.cpp	/^string OptionParser::get_usage() const {$/;"	f	class:optparse::OptionParser	signature:() const
+get_usage	option.h	/^    std::string get_usage() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+get_version	option.cpp	/^string OptionParser::get_version() const {$/;"	f	class:optparse::OptionParser	signature:() const
+get_version	option.h	/^    std::string get_version() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+gmTime	cb/allBalances.cpp	/^    static void gmTime($/;"	f	struct:AllBalances	access:public	signature:( char *timeBuf, const time_t &last )
+graph	cb/closure.cpp	/^    Graph graph;$/;"	m	struct:Closure	file:	access:public
+group_description	option.h	/^    OptionGroup& group_description(const std::string& d) { _group_description = d; return *this; }$/;"	f	class:optparse::OptionGroup	access:public	signature:(const std::string& d)
+group_description	option.h	/^    const std::string& group_description() const { return _group_description; }$/;"	f	class:optparse::OptionGroup	access:public	signature:() const
+guessHash160	util.cpp	/^bool guessHash160($/;"	f	signature:( uint8_t *hash160, const uint8_t *addr, bool verbose )
+guessHash160	util.h	/^    bool guessHash160($/;"	p	signature:( uint8_t *hash160, const uint8_t *addr )
+handle_long_opt	option.cpp	/^void OptionParser::handle_long_opt(const string& optstr) {$/;"	f	class:optparse::OptionParser	signature:(const string& optstr)
+handle_long_opt	option.h	/^    void handle_long_opt(const std::string& optstr);$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& optstr)
+handle_short_opt	option.cpp	/^void OptionParser::handle_short_opt(const string& opt, const string& arg) {$/;"	f	class:optparse::OptionParser	signature:(const string& opt, const string& arg)
+handle_short_opt	option.h	/^    void handle_short_opt(const std::string& opt, const std::string& arg);$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& opt, const std::string& arg)
+hasGenInput	cb/pristine.cpp	/^    bool hasGenInput;$/;"	m	struct:Pristine	file:	access:public
+hasGenInput	cb/rewards.cpp	/^    bool hasGenInput;$/;"	m	struct:Rewards	file:	access:public
+hash	cb/allBalances.cpp	/^    uint160_t hash;$/;"	m	struct:Addr	file:	access:public
+hash160ToAddr	util.cpp	/^void hash160ToAddr($/;"	f	signature:( uint8_t *addr, const uint8_t *hash160, uint8_t type )
+hash160ToAddr	util.h	/^    void hash160ToAddr($/;"	p	signature:( uint8_t *addr, const uint8_t *hash160, uint8_t type = 48 )
+hashes$	tags	/^Callback::needTXHash	callback.h	\/^        virtual bool            needTXHash(                            ) const { return false; } \\\/\\\/ Overload if you need parser to compute TX hashes$\/;"	f	struct:Callback	access:public	signature:( ) const$/;"	v	typeref:struct:__anon3
+height	util.h	/^        int64_t       height;$/;"	m	struct:Block	access:public
+help	cb/help.cpp	/^static Help help;$/;"	v	file:
+help	option.h	/^    Option& help(const std::string& h) { _help = h; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& h)
+help	option.h	/^    const std::string& help() const { return _help; }$/;"	f	class:optparse::Option	access:public	signature:() const
+hexDigits	util.cpp	/^const uint8_t hexDigits[] = "0123456789abcdef";$/;"	v
+info	errlog.h	/^    static inline void info($/;"	f	signature:( const char *format, ... )
+init	callback.h	/^        virtual int                   init(int argc, const char *argv[])       { return 0;     } \/\/ Called after callback construction, with command line arguments$/;"	f	struct:Callback	access:public	signature:(int argc, const char *argv[])
+init	cb/allBalances.cpp	/^    virtual int init($/;"	f	struct:AllBalances	access:public	signature:( int argc, const char *argv[] )
+init	cb/closure.cpp	/^    virtual int init($/;"	f	struct:Closure	access:public	signature:( int argc, const char *argv[] )
+init	cb/dumpTX.cpp	/^    virtual int init($/;"	f	struct:DumpTX	access:public	signature:( int argc, const char *argv[] )
+init	cb/help.cpp	/^    virtual int init($/;"	f	struct:Help	access:public	signature:( int argc, const char *argv[] )
+init	cb/pristine.cpp	/^    virtual int init($/;"	f	struct:Pristine	access:public	signature:( int argc, const char *argv[] )
+init	cb/rewards.cpp	/^    virtual int init($/;"	f	struct:Rewards	access:public	signature:( int argc, const char *argv[] )
+init	cb/simpleStats.cpp	/^    virtual int init($/;"	f	struct:SimpleStats	access:public	signature:( int argc, const char *argv[] )
+init	cb/sql.cpp	/^    virtual int init($/;"	f	struct:SQLDump	access:public	signature:( int argc, const char *argv[] )
+init	cb/taint.cpp	/^    virtual int init($/;"	f	struct:Taint	access:public	signature:( int argc, const char *argv[] )
+init	cb/transactions.cpp	/^    virtual int init($/;"	f	struct:Transactions	access:public	signature:( int argc, const char *argv[] )
+initCallback	parser.cpp	/^static void initCallback($/;"	f	file:	signature:( int argc, char *argv[] )
+initHashtables	parser.cpp	/^static void initHashtables()$/;"	f	file:	signature:()
+input$	tags	/^endInput	callback.h	\/^        virtual void     endInput(const uint8_t *p                     )       {               }  \\\/\\\/ Called when at the end of a TX input$\/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )$/;"	v	typeref:struct:__anon12
+inputFile	cb/sql.cpp	/^    FILE *inputFile;$/;"	m	struct:SQLDump	file:	access:public
+inputID	cb/sql.cpp	/^    uint64_t inputID;$/;"	m	struct:SQLDump	file:	access:public
+inputIndex	cb/allBalances.cpp	/^    uint64_t inputIndex;$/;"	m	struct:Output	file:	access:public
+int128_t	util.h	/^    typedef signed int int128_t __attribute__((mode(TI)));$/;"	t
+interspersed_args	option.h	/^    bool interspersed_args() const { return _interspersed_args; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+isGenTX	cb/dumpTX.cpp	/^    bool isGenTX;$/;"	m	struct:DumpTX	file:	access:public
+is_set	option.h	/^    bool is_set(const std::string& d) const { return _map.find(d) != _map.end(); }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d) const
+is_set_by_user	option.cpp	/^void Values::is_set_by_user(const string& d, bool yes) {$/;"	f	class:optparse::Values	signature:(const string& d, bool yes)
+is_set_by_user	option.h	/^    bool is_set_by_user(const std::string& d) const { return _userSet.find(d) != _userSet.end(); }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d) const
+is_set_by_user	option.h	/^    void is_set_by_user(const std::string& d, bool yes);$/;"	p	class:optparse::Values	access:public	signature:(const std::string& d, bool yes)
+iterator	option.h	/^    typedef std::list<std::string>::iterator iterator;$/;"	t	class:optparse::Values	access:public
+kOP_BOGUS_TO_GET_GCC_TO_STFU	opcodes.h	/^            kOP_BOGUS_TO_GET_GCC_TO_STFU$/;"	e	enum:Opcode
+kPageByteSize	util.h	/^        enum { kPageByteSize = sizeof(T)*kPageSize };$/;"	e	enum:PagedAllocator::__anon20
+kRIPEMD160ByteSize	rmd160.h	/^    enum { kRIPEMD160ByteSize = 20 };$/;"	e	enum:__anon18
+kSHA256ByteSize	sha256.h	/^    enum { kSHA256ByteSize = 32 };$/;"	e	enum:__anon19
+lastBlock	cb/allBalances.cpp	/^    const Block *lastBlock;$/;"	m	struct:AllBalances	file:	access:public
+lastIn	cb/allBalances.cpp	/^    uint32_t lastIn;$/;"	m	struct:Addr	file:	access:public
+lastOut	cb/allBalances.cpp	/^    uint32_t lastOut;$/;"	m	struct:Addr	file:	access:public
+likely	common.h	13;"	d
+likely	common.h	17;"	d
+limit	cb/allBalances.cpp	/^    int64_t limit;$/;"	m	struct:AllBalances	file:	access:public
+linkAllBlocks	parser.cpp	/^static void linkAllBlocks()$/;"	f	file:	signature:()
+linkBlock	parser.cpp	/^static void linkBlock($/;"	f	file:	signature:( Block *block )
+loadHash256List	util.cpp	/^void loadHash256List($/;"	f	signature:( std::vector<uint256_t> &result, const char *str, bool verbose )
+loadHash256List	util.h	/^    void loadHash256List($/;"	p	signature:( std::vector<uint256_t> &result, const char *str, bool verbose = false )
+loadKeyHash	util.cpp	/^const uint8_t *loadKeyHash($/;"	f	signature:( const uint8_t *hexHash )
+loadKeyHash	util.h	/^    const uint8_t *loadKeyHash($/;"	p	signature:( const uint8_t *hexHash = 0, bool verbose = false )
+loadKeyList	util.cpp	/^void loadKeyList($/;"	f	signature:( std::vector<uint160_t> &result, const char *str, bool verbose )
+loadKeyList	util.h	/^    void loadKeyList($/;"	p	signature:( std::vector<uint160_t> &result, const char *str, bool verbose = false )
+loadVarInt	util.h	/^    static inline uint64_t loadVarInt($/;"	f	signature:( const uint8_t *&p )
+lookup_long_opt	option.cpp	/^const Option& OptionParser::lookup_long_opt(const string& opt) const {$/;"	f	class:optparse::OptionParser	signature:(const string& opt) const
+lookup_long_opt	option.h	/^    const Option& lookup_long_opt(const std::string& opt) const;$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& opt) const
+lookup_short_opt	option.cpp	/^const Option& OptionParser::lookup_short_opt(const string& opt) const {$/;"	f	class:optparse::OptionParser	signature:(const string& opt) const
+lookup_short_opt	option.h	/^    const Option& lookup_short_opt(const std::string& opt) const;$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& opt) const
+lstMap	option.h	/^typedef std::map<std::string,std::list<std::string> > lstMap;$/;"	t	namespace:optparse
+lwrap	option.cpp	/^  const string lwrap, rwrap;$/;"	m	class:optparse::str_wrap	file:	access:public
+main	parser.cpp	/^int main($/;"	f	signature:( int argc, char *argv[] )
+mapBlockChainFiles	parser.cpp	/^static void mapBlockChainFiles()$/;"	f	file:	signature:()
+mapVec	parser.cpp	/^static std::vector<Map> mapVec;$/;"	v	file:
+memory$	tags	/^Callback::endMap	callback.h	\/^        virtual void       endMap(const uint8_t *p                     )       {               }  \\\/\\\/ Called when a blockchain file is unmapped from memory$\/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )$/;"	v	typeref:struct:__anon5
+memory$	tags	/^Callback::startMap	callback.h	\/^        virtual void     startMap(const uint8_t *p                     )       {               }  \\\/\\\/ Called when a blockchain file is mapped into memory$\/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )$/;"	v	typeref:struct:__anon4
+metavar	option.h	/^    Option& metavar(const std::string& m) { _metavar = m; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& m)
+metavar	option.h	/^    const std::string& metavar() const { return _metavar; }$/;"	f	class:optparse::Option	access:public	signature:() const
+move	cb/allBalances.cpp	/^    void move($/;"	f	struct:AllBalances	access:public	signature:( const uint8_t *script, uint64_t scriptSize, const uint8_t *upTXHash, int64_t outputIndex, int64_t value, const uint8_t *downTXHash = 0, uint64_t inputIndex = -1 )
+move	cb/transactions.cpp	/^    void move($/;"	f	struct:Transactions	access:public	signature:( const uint8_t *script, uint64_t scriptSize, const uint8_t *txHash, uint64_t value, bool add, const uint8_t *downTXHash = 0 )
+name	callback.h	/^        virtual const char           *name(                            ) const = 0;              \/\/ Main name for callback$/;"	p	struct:Callback	access:public	signature:( ) const
+name	cb/allBalances.cpp	/^    virtual const char                   *name() const         { return "allBalances"; }$/;"	f	struct:AllBalances	access:public	signature:() const
+name	cb/closure.cpp	/^    virtual const char                   *name() const         { return "closure"; }$/;"	f	struct:Closure	access:public	signature:() const
+name	cb/dumpTX.cpp	/^    virtual const char                   *name() const         { return "dumpTX"; }$/;"	f	struct:DumpTX	access:public	signature:() const
+name	cb/help.cpp	/^    virtual const char             *name() const               { return "help"; }$/;"	f	struct:Help	access:public	signature:() const
+name	cb/pristine.cpp	/^    virtual const char                   *name() const         { return "pristine"; }$/;"	f	struct:Pristine	access:public	signature:() const
+name	cb/rewards.cpp	/^    virtual const char                   *name() const         { return "rewards"; }$/;"	f	struct:Rewards	access:public	signature:() const
+name	cb/simpleStats.cpp	/^    virtual const char                   *name() const         { return "simpleStats"; }$/;"	f	struct:SimpleStats	access:public	signature:() const
+name	cb/sql.cpp	/^    virtual const char                   *name() const         { return "sqldump"; }$/;"	f	struct:SQLDump	access:public	signature:() const
+name	cb/taint.cpp	/^    virtual const char                   *name() const         { return "taint"; }$/;"	f	struct:Taint	access:public	signature:() const
+name	cb/transactions.cpp	/^    virtual const char                   *name() const         { return "transactions"; }$/;"	f	struct:Transactions	access:public	signature:() const
+name	parser.cpp	/^    std::string name;$/;"	m	struct:Map	file:	access:public
+nargs	option.h	/^    Option& nargs(size_t n) { _nargs = n; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(size_t n)
+nargs	option.h	/^    size_t nargs() const { return _nargs; }$/;"	f	class:optparse::Option	access:public	signature:() const
+nbBlocks	cb/simpleStats.cpp	/^    uint128_t nbBlocks;$/;"	m	struct:SimpleStats	file:	access:public
+nbDumped	cb/dumpTX.cpp	/^    uint64_t nbDumped;$/;"	m	struct:DumpTX	file:	access:public
+nbIn	cb/allBalances.cpp	/^    uint64_t nbIn;$/;"	m	struct:Addr	file:	access:public
+nbInputs	cb/dumpTX.cpp	/^    uint64_t nbInputs;$/;"	m	struct:DumpTX	file:	access:public
+nbInputs	cb/pristine.cpp	/^    size_t nbInputs;$/;"	m	struct:Pristine	file:	access:public
+nbInputs	cb/rewards.cpp	/^    size_t nbInputs;$/;"	m	struct:Rewards	file:	access:public
+nbInputs	cb/simpleStats.cpp	/^    uint128_t nbInputs;$/;"	m	struct:SimpleStats	file:	access:public
+nbMaps	cb/simpleStats.cpp	/^    uint128_t nbMaps;$/;"	m	struct:SimpleStats	file:	access:public
+nbOut	cb/allBalances.cpp	/^    uint64_t nbOut;$/;"	m	struct:Addr	file:	access:public
+nbOutputs	cb/dumpTX.cpp	/^    uint64_t nbOutputs;$/;"	m	struct:DumpTX	file:	access:public
+nbOutputs	cb/simpleStats.cpp	/^    uint128_t nbOutputs;$/;"	m	struct:SimpleStats	file:	access:public
+nbPristine	cb/pristine.cpp	/^    uint64_t nbPristine;$/;"	m	struct:Pristine	file:	access:public
+nbTX	cb/transactions.cpp	/^    uint64_t nbTX;$/;"	m	struct:Transactions	file:	access:public
+nbTransactions	cb/simpleStats.cpp	/^    uint128_t nbTransactions;$/;"	m	struct:SimpleStats	file:	access:public
+nbValidBlocks	cb/simpleStats.cpp	/^    uint128_t nbValidBlocks;$/;"	m	struct:SimpleStats	file:	access:public
+needTXHash	callback.h	/^        virtual bool            needTXHash(                            ) const { return false; } \/\/ Overload if you need parser to compute TX hashes$/;"	f	struct:Callback	access:public	signature:( ) const
+needTXHash	cb/allBalances.cpp	/^    virtual bool                         needTXHash() const    { return true;          }$/;"	f	struct:AllBalances	access:public	signature:() const
+needTXHash	cb/closure.cpp	/^    virtual bool                         needTXHash() const    { return true;      }$/;"	f	struct:Closure	access:public	signature:() const
+needTXHash	cb/dumpTX.cpp	/^    virtual bool                         needTXHash() const    { return true;     }$/;"	f	struct:DumpTX	access:public	signature:() const
+needTXHash	cb/help.cpp	/^    virtual bool                   needTXHash() const          { return false;  }$/;"	f	struct:Help	access:public	signature:() const
+needTXHash	cb/pristine.cpp	/^    virtual bool                         needTXHash() const    { return true;       }$/;"	f	struct:Pristine	access:public	signature:() const
+needTXHash	cb/rewards.cpp	/^    virtual bool                         needTXHash() const    { return true;      }$/;"	f	struct:Rewards	access:public	signature:() const
+needTXHash	cb/simpleStats.cpp	/^    virtual bool                         needTXHash() const    { return false;         }$/;"	f	struct:SimpleStats	access:public	signature:() const
+needTXHash	cb/sql.cpp	/^    virtual bool                         needTXHash() const    { return true;      }$/;"	f	struct:SQLDump	access:public	signature:() const
+needTXHash	cb/taint.cpp	/^    virtual bool                         needTXHash() const    { return true;    }$/;"	f	struct:Taint	access:public	signature:() const
+needTXHash	cb/transactions.cpp	/^    virtual bool                         needTXHash() const    { return true;           }$/;"	f	struct:Transactions	access:public	signature:() const
+next	util.h	/^        Block         *next;$/;"	m	struct:Block	access:public
+offset	cb/allBalances.cpp	/^    uint64_t offset;$/;"	m	struct:AllBalances	file:	access:public
+operator ()	callback.cpp	/^    bool operator()($/;"	f	struct:Cmp	access:public	signature:( const Callback *a, const Callback *b )
+operator ()	cb/allBalances.cpp	/^    bool operator()($/;"	f	struct:CompareAddr	access:public	signature:( const Addr *const &a, const Addr *const &b ) const
+operator ()	option.cpp	/^  string operator() (const string& s) { return lwrap + s + rwrap; }$/;"	f	class:optparse::str_wrap	access:public	signature:(const string& s)
+operator ()	option.h	/^  virtual void operator() (const Option& option, const std::string& opt, const std::string& val, const OptionParser& parser) = 0;$/;"	p	class:optparse::Callback	access:public	signature:(const Option& option, const std::string& opt, const std::string& val, const OptionParser& parser)
+operator ()	util.h	/^        bool operator()($/;"	f	struct:Hash160Equal	access:public	signature:( const Hash160 &ha, const Hash160 &hb ) const
+operator ()	util.h	/^        bool operator()($/;"	f	struct:Hash256Equal	access:public	signature:( const Hash256 &ha, const Hash256 &hb ) const
+operator ()	util.h	/^    struct Hash160Hasher { uint64_t operator()( const Hash160 &hash160) const { uintptr_t i = reinterpret_cast<uintptr_t>(hash160); const uint64_t *p = reinterpret_cast<const uint64_t*>(i); return p[0]; } };$/;"	f	struct:Hash160Hasher	access:public	signature:( const Hash160 &hash160) const
+operator ()	util.h	/^    struct Hash256Hasher { uint64_t operator()( const Hash256 &hash256) const { uintptr_t i = reinterpret_cast<uintptr_t>(hash256); const uint64_t *p = reinterpret_cast<const uint64_t*>(i); return p[0]; } };$/;"	f	struct:Hash256Hasher	access:public	signature:( const Hash256 &hash256) const
+operator []	option.cpp	/^const string& Values::operator[] (const string& d) const {$/;"	f	class:optparse::Values	signature:(const string& d) const
+operator []	option.h	/^    const std::string& operator[] (const std::string& d) const;$/;"	p	class:optparse::Values	access:public	signature:(const std::string& d) const
+operator []	option.h	/^    std::string& operator[] (const std::string& d) { return _map[d]; }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d)
+operator bool	option.h	/^    operator bool() { bool t; return (valid && (std::istringstream(str) >> t)) ? t : false; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator const char*	option.h	/^    operator const char*() { return str.c_str(); }$/;"	f	class:optparse::Value	access:public	signature:()
+operator double	option.h	/^    operator double() { double t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator float	option.h	/^    operator float() { float t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator int	option.h	/^    operator int() { int t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator long	option.h	/^    operator long() { long t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator long double	option.h	/^    operator long double() { long double t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator short	option.h	/^    operator short() { short t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator unsigned int	option.h	/^    operator unsigned int() { unsigned int t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator unsigned long	option.h	/^    operator unsigned long() { unsigned long t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+operator unsigned short	option.h	/^    operator unsigned short() { unsigned short t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optMap	option.h	/^typedef std::map<std::string,Option const*> optMap;$/;"	t	namespace:optparse
+optionParser	callback.h	/^        virtual const Parser *optionParser(                            ) const = 0;              \/\/ Option parser object for callback$/;"	p	struct:Callback	access:public	signature:( ) const
+optionParser	cb/allBalances.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;       }$/;"	f	struct:AllBalances	access:public	signature:() const
+optionParser	cb/closure.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;   }$/;"	f	struct:Closure	access:public	signature:() const
+optionParser	cb/dumpTX.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;  }$/;"	f	struct:DumpTX	access:public	signature:() const
+optionParser	cb/help.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;}$/;"	f	struct:Help	access:public	signature:() const
+optionParser	cb/pristine.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;    }$/;"	f	struct:Pristine	access:public	signature:() const
+optionParser	cb/rewards.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;   }$/;"	f	struct:Rewards	access:public	signature:() const
+optionParser	cb/simpleStats.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;       }$/;"	f	struct:SimpleStats	access:public	signature:() const
+optionParser	cb/sql.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;   }$/;"	f	struct:SQLDump	access:public	signature:() const
+optionParser	cb/taint.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser; }$/;"	f	struct:Taint	access:public	signature:() const
+optionParser	cb/transactions.cpp	/^    virtual const optparse::OptionParser *optionParser() const { return &parser;        }$/;"	f	struct:Transactions	access:public	signature:() const
+optparse	option.cpp	/^namespace optparse {$/;"	n	file:
+optparse	option.h	/^namespace optparse {$/;"	n
+optparse::Callback	option.h	/^class Callback {$/;"	c	namespace:optparse
+optparse::Callback::operator ()	option.h	/^  virtual void operator() (const Option& option, const std::string& opt, const std::string& val, const OptionParser& parser) = 0;$/;"	p	class:optparse::Callback	access:public	signature:(const Option& option, const std::string& opt, const std::string& val, const OptionParser& parser)
+optparse::Callback::~Callback	option.h	/^  virtual ~Callback() {}$/;"	f	class:optparse::Callback	access:public	signature:()
+optparse::Option	option.h	/^class Option {$/;"	c	namespace:optparse
+optparse::Option::Option	option.h	/^    Option() : _action("store"), _type("string"), _nargs(1), _callback(0) {}$/;"	f	class:optparse::Option	access:public	signature:()
+optparse::Option::_action	option.h	/^    std::string _action;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_callback	option.h	/^    Callback* _callback;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_choices	option.h	/^    std::list<std::string> _choices;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_const	option.h	/^    std::string _const;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_default	option.h	/^    std::string _default;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_dest	option.h	/^    std::string _dest;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_help	option.h	/^    std::string _help;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_long_opts	option.h	/^    std::set<std::string> _long_opts;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_metavar	option.h	/^    std::string _metavar;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_nargs	option.h	/^    size_t _nargs;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_short_opts	option.h	/^    std::set<std::string> _short_opts;$/;"	m	class:optparse::Option	access:private
+optparse::Option::_type	option.h	/^    std::string _type;$/;"	m	class:optparse::Option	access:private
+optparse::Option::action	option.cpp	/^Option& Option::action(const string& a) {$/;"	f	class:optparse::Option	signature:(const string& a)
+optparse::Option::action	option.h	/^    Option& action(const std::string& a);$/;"	p	class:optparse::Option	access:public	signature:(const std::string& a)
+optparse::Option::action	option.h	/^    const std::string& action() const { return _action; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::callback	option.h	/^    Callback* callback() const { return _callback; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::callback	option.h	/^    Option& callback(Callback& c) { _callback = &c; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(Callback& c)
+optparse::Option::check_type	option.cpp	/^string Option::check_type(const string& opt, const string& val) const {$/;"	f	class:optparse::Option	signature:(const string& opt, const string& val) const
+optparse::Option::check_type	option.h	/^    std::string check_type(const std::string& opt, const std::string& val) const;$/;"	p	class:optparse::Option	access:private	signature:(const std::string& opt, const std::string& val) const
+optparse::Option::choices	option.h	/^    Option& choices(InputIterator begin, InputIterator end) {$/;"	f	class:optparse::Option	access:public	signature:(InputIterator begin, InputIterator end)
+optparse::Option::choices	option.h	/^    const std::list<std::string>& choices() const { return _choices; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::dest	option.h	/^    Option& dest(const std::string& d) { _dest = d; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& d)
+optparse::Option::dest	option.h	/^    const std::string& dest() const { return _dest; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::format_help	option.cpp	/^string Option::format_help(unsigned int indent \/* = 2 *\/) const {$/;"	f	class:optparse::Option	signature:(unsigned int indent ) const
+optparse::Option::format_help	option.h	/^    std::string format_help(unsigned int indent = 2) const;$/;"	p	class:optparse::Option	access:private	signature:(unsigned int indent = 2) const
+optparse::Option::format_option_help	option.cpp	/^string Option::format_option_help(unsigned int indent \/* = 2 *\/) const {$/;"	f	class:optparse::Option	signature:(unsigned int indent ) const
+optparse::Option::format_option_help	option.h	/^    std::string format_option_help(unsigned int indent = 2) const;$/;"	p	class:optparse::Option	access:private	signature:(unsigned int indent = 2) const
+optparse::Option::get_const	option.h	/^    const std::string& get_const() const { return _const; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::get_default	option.h	/^    const std::string& get_default() const { return _default; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::help	option.h	/^    Option& help(const std::string& h) { _help = h; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& h)
+optparse::Option::help	option.h	/^    const std::string& help() const { return _help; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::metavar	option.h	/^    Option& metavar(const std::string& m) { _metavar = m; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& m)
+optparse::Option::metavar	option.h	/^    const std::string& metavar() const { return _metavar; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::nargs	option.h	/^    Option& nargs(size_t n) { _nargs = n; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(size_t n)
+optparse::Option::nargs	option.h	/^    size_t nargs() const { return _nargs; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::set_const	option.h	/^    Option& set_const(const std::string& c) { _const = c; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& c)
+optparse::Option::set_default	option.h	/^    Option& set_default(T t) { std::ostringstream ss; ss << t; _default = ss.str(); return *this; }$/;"	f	class:optparse::Option	access:public	signature:(T t)
+optparse::Option::set_default	option.h	/^    Option& set_default(const std::string& d) { _default = d; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& d)
+optparse::Option::type	option.h	/^    Option& type(const std::string& t) { _type = t; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& t)
+optparse::Option::type	option.h	/^    const std::string& type() const { return _type; }$/;"	f	class:optparse::Option	access:public	signature:() const
+optparse::Option::~Option	option.h	/^    virtual ~Option() {}$/;"	f	class:optparse::Option	access:public	signature:()
+optparse::OptionGroup	option.h	/^class OptionGroup : public OptionParser {$/;"	c	namespace:optparse	inherits:OptionParser
+optparse::OptionGroup::OptionGroup	option.h	/^    OptionGroup(const OptionParser& p, const std::string& t, const std::string& d = "") :$/;"	f	class:optparse::OptionGroup	access:public	signature:(const OptionParser& p, const std::string& t, const std::string& d = Ó)
+optparse::OptionGroup::_group_description	option.h	/^    std::string _group_description;$/;"	m	class:optparse::OptionGroup	access:private
+optparse::OptionGroup::_parser	option.h	/^    const OptionParser& _parser;$/;"	m	class:optparse::OptionGroup	access:private
+optparse::OptionGroup::_title	option.h	/^    std::string _title;$/;"	m	class:optparse::OptionGroup	access:private
+optparse::OptionGroup::group_description	option.h	/^    OptionGroup& group_description(const std::string& d) { _group_description = d; return *this; }$/;"	f	class:optparse::OptionGroup	access:public	signature:(const std::string& d)
+optparse::OptionGroup::group_description	option.h	/^    const std::string& group_description() const { return _group_description; }$/;"	f	class:optparse::OptionGroup	access:public	signature:() const
+optparse::OptionGroup::title	option.h	/^    OptionGroup& title(const std::string& t) { _title = t; return *this; }$/;"	f	class:optparse::OptionGroup	access:public	signature:(const std::string& t)
+optparse::OptionGroup::title	option.h	/^    const std::string& title() const { return _title; }$/;"	f	class:optparse::OptionGroup	access:public	signature:() const
+optparse::OptionGroup::~OptionGroup	option.h	/^    virtual ~OptionGroup() {}$/;"	f	class:optparse::OptionGroup	access:public	signature:()
+optparse::OptionParser	option.h	/^class OptionParser {$/;"	c	namespace:optparse
+optparse::OptionParser::OptionParser	option.cpp	/^OptionParser::OptionParser() :$/;"	f	class:optparse::OptionParser	signature:()
+optparse::OptionParser::OptionParser	option.h	/^    OptionParser();$/;"	p	class:optparse::OptionParser	access:public	signature:()
+optparse::OptionParser::_add_help_option	option.h	/^    bool _add_help_option;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_add_version_option	option.h	/^    bool _add_version_option;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_defaults	option.h	/^    strMap _defaults;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_description	option.h	/^    std::string _description;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_epilog	option.h	/^    std::string _epilog;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_groups	option.h	/^    std::list<OptionGroup const*> _groups;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_interspersed_args	option.h	/^    bool _interspersed_args;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_leftover	option.h	/^    std::list<std::string> _leftover;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_optmap_l	option.h	/^    optMap _optmap_l;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_optmap_s	option.h	/^    optMap _optmap_s;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_opts	option.h	/^    std::list<Option> _opts;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_prog	option.h	/^    std::string _prog;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_remaining	option.h	/^    std::list<std::string> _remaining;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_usage	option.h	/^    std::string _usage;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_values	option.h	/^    Values _values;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::_version	option.h	/^    std::string _version;$/;"	m	class:optparse::OptionParser	access:private
+optparse::OptionParser::add_help_option	option.h	/^    OptionParser& add_help_option(bool h) { _add_help_option = h; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(bool h)
+optparse::OptionParser::add_help_option	option.h	/^    bool add_help_option() const { return _add_help_option; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::add_option	option.cpp	/^Option& OptionParser::add_option(const string& opt) {$/;"	f	class:optparse::OptionParser	signature:(const string& opt)
+optparse::OptionParser::add_option	option.cpp	/^Option& OptionParser::add_option(const string& opt1, const string& opt2) {$/;"	f	class:optparse::OptionParser	signature:(const string& opt1, const string& opt2)
+optparse::OptionParser::add_option	option.cpp	/^Option& OptionParser::add_option(const string& opt1, const string& opt2, const string& opt3) {$/;"	f	class:optparse::OptionParser	signature:(const string& opt1, const string& opt2, const string& opt3)
+optparse::OptionParser::add_option	option.cpp	/^Option& OptionParser::add_option(const vector<string>& v) {$/;"	f	class:optparse::OptionParser	signature:(const vector<string>& v)
+optparse::OptionParser::add_option	option.h	/^    Option& add_option(const std::string& opt);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& opt)
+optparse::OptionParser::add_option	option.h	/^    Option& add_option(const std::string& opt1, const std::string& opt2);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& opt1, const std::string& opt2)
+optparse::OptionParser::add_option	option.h	/^    Option& add_option(const std::string& opt1, const std::string& opt2, const std::string& opt3);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& opt1, const std::string& opt2, const std::string& opt3)
+optparse::OptionParser::add_option	option.h	/^    Option& add_option(const std::vector<std::string>& opt);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::vector<std::string>& opt)
+optparse::OptionParser::add_option_group	option.cpp	/^OptionParser& OptionParser::add_option_group(const OptionGroup& group) {$/;"	f	class:optparse::OptionParser	signature:(const OptionGroup& group)
+optparse::OptionParser::add_option_group	option.h	/^    OptionParser& add_option_group(const OptionGroup& group);$/;"	p	class:optparse::OptionParser	access:public	signature:(const OptionGroup& group)
+optparse::OptionParser::add_version_option	option.h	/^    OptionParser& add_version_option(bool v) { _add_version_option = v; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(bool v)
+optparse::OptionParser::add_version_option	option.h	/^    bool add_version_option() const { return _add_version_option; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::args	option.h	/^    const std::list<std::string>& args() const { return _leftover; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::args	option.h	/^    std::vector<std::string> args() {$/;"	f	class:optparse::OptionParser	access:public	signature:()
+optparse::OptionParser::description	option.h	/^    OptionParser& description(const std::string& d) { _description = d; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& d)
+optparse::OptionParser::description	option.h	/^    const std::string& description() const { return _description; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::disable_interspersed_args	option.h	/^    OptionParser& disable_interspersed_args() { _interspersed_args = false; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:()
+optparse::OptionParser::enable_interspersed_args	option.h	/^    OptionParser& enable_interspersed_args() { _interspersed_args = true; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:()
+optparse::OptionParser::epilog	option.h	/^    OptionParser& epilog(const std::string& e) { _epilog = e; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& e)
+optparse::OptionParser::epilog	option.h	/^    const std::string& epilog() const { return _epilog; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::error	option.cpp	/^void OptionParser::error(const string& msg) const {$/;"	f	class:optparse::OptionParser	signature:(const string& msg) const
+optparse::OptionParser::error	option.h	/^    void error(const std::string& msg) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& msg) const
+optparse::OptionParser::exit	option.cpp	/^void OptionParser::exit() const {$/;"	f	class:optparse::OptionParser	signature:() const
+optparse::OptionParser::exit	option.h	/^    void exit() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::format_help	option.cpp	/^string OptionParser::format_help(unsigned int indent \/* = 4 *\/) const {$/;"	f	class:optparse::OptionParser	signature:(unsigned int indent ) const
+optparse::OptionParser::format_help	option.h	/^    std::string format_help(unsigned int indent = 4) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(unsigned int indent = 4) const
+optparse::OptionParser::format_option_help	option.cpp	/^string OptionParser::format_option_help(unsigned int indent \/* = 2 *\/) const {$/;"	f	class:optparse::OptionParser	signature:(unsigned int indent ) const
+optparse::OptionParser::format_option_help	option.h	/^    std::string format_option_help(unsigned int indent = 2) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(unsigned int indent = 2) const
+optparse::OptionParser::format_usage	option.cpp	/^string OptionParser::format_usage(const string& u) const {$/;"	f	class:optparse::OptionParser	signature:(const string& u) const
+optparse::OptionParser::format_usage	option.h	/^    std::string format_usage(const std::string& u) const;$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& u) const
+optparse::OptionParser::get_usage	option.cpp	/^string OptionParser::get_usage() const {$/;"	f	class:optparse::OptionParser	signature:() const
+optparse::OptionParser::get_usage	option.h	/^    std::string get_usage() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::get_version	option.cpp	/^string OptionParser::get_version() const {$/;"	f	class:optparse::OptionParser	signature:() const
+optparse::OptionParser::get_version	option.h	/^    std::string get_version() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::handle_long_opt	option.cpp	/^void OptionParser::handle_long_opt(const string& optstr) {$/;"	f	class:optparse::OptionParser	signature:(const string& optstr)
+optparse::OptionParser::handle_long_opt	option.h	/^    void handle_long_opt(const std::string& optstr);$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& optstr)
+optparse::OptionParser::handle_short_opt	option.cpp	/^void OptionParser::handle_short_opt(const string& opt, const string& arg) {$/;"	f	class:optparse::OptionParser	signature:(const string& opt, const string& arg)
+optparse::OptionParser::handle_short_opt	option.h	/^    void handle_short_opt(const std::string& opt, const std::string& arg);$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& opt, const std::string& arg)
+optparse::OptionParser::interspersed_args	option.h	/^    bool interspersed_args() const { return _interspersed_args; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::lookup_long_opt	option.cpp	/^const Option& OptionParser::lookup_long_opt(const string& opt) const {$/;"	f	class:optparse::OptionParser	signature:(const string& opt) const
+optparse::OptionParser::lookup_long_opt	option.h	/^    const Option& lookup_long_opt(const std::string& opt) const;$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& opt) const
+optparse::OptionParser::lookup_short_opt	option.cpp	/^const Option& OptionParser::lookup_short_opt(const string& opt) const {$/;"	f	class:optparse::OptionParser	signature:(const string& opt) const
+optparse::OptionParser::lookup_short_opt	option.h	/^    const Option& lookup_short_opt(const std::string& opt) const;$/;"	p	class:optparse::OptionParser	access:private	signature:(const std::string& opt) const
+optparse::OptionParser::parse_args	option.cpp	/^Values& OptionParser::parse_args(const int argc, char const* const* const argv) {$/;"	f	class:optparse::OptionParser	signature:(const int argc, char const* const* const argv)
+optparse::OptionParser::parse_args	option.cpp	/^Values& OptionParser::parse_args(const vector<string>& v) {$/;"	f	class:optparse::OptionParser	signature:(const vector<string>& v)
+optparse::OptionParser::parse_args	option.h	/^    Values& parse_args(InputIterator begin, InputIterator end) {$/;"	f	class:optparse::OptionParser	access:public	signature:(InputIterator begin, InputIterator end)
+optparse::OptionParser::parse_args	option.h	/^    Values& parse_args(const std::vector<std::string>& args);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::vector<std::string>& args)
+optparse::OptionParser::parse_args	option.h	/^    Values& parse_args(int argc, char const* const* argv);$/;"	p	class:optparse::OptionParser	access:public	signature:(int argc, char const* const* argv)
+optparse::OptionParser::print_help	option.cpp	/^void OptionParser::print_help() const {$/;"	f	class:optparse::OptionParser	signature:() const
+optparse::OptionParser::print_help	option.h	/^    void print_help() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::print_usage	option.cpp	/^void OptionParser::print_usage() const {$/;"	f	class:optparse::OptionParser	signature:() const
+optparse::OptionParser::print_usage	option.cpp	/^void OptionParser::print_usage(ostream& out) const {$/;"	f	class:optparse::OptionParser	signature:(ostream& out) const
+optparse::OptionParser::print_usage	option.h	/^    void print_usage() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::print_usage	option.h	/^    void print_usage(std::ostream& out) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(std::ostream& out) const
+optparse::OptionParser::print_version	option.cpp	/^void OptionParser::print_version() const {$/;"	f	class:optparse::OptionParser	signature:() const
+optparse::OptionParser::print_version	option.cpp	/^void OptionParser::print_version(ostream& out) const {$/;"	f	class:optparse::OptionParser	signature:(ostream& out) const
+optparse::OptionParser::print_version	option.h	/^    void print_version() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::print_version	option.h	/^    void print_version(std::ostream& out) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(std::ostream& out) const
+optparse::OptionParser::process_opt	option.cpp	/^void OptionParser::process_opt(const Option& o, const string& opt, const string& value) {$/;"	f	class:optparse::OptionParser	signature:(const Option& o, const string& opt, const string& value)
+optparse::OptionParser::process_opt	option.h	/^    void process_opt(const Option& option, const std::string& opt, const std::string& value);$/;"	p	class:optparse::OptionParser	access:private	signature:(const Option& option, const std::string& opt, const std::string& value)
+optparse::OptionParser::prog	option.h	/^    OptionParser& prog(const std::string& p) { _prog = p; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& p)
+optparse::OptionParser::prog	option.h	/^    const std::string& prog() const { return _prog; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::set_defaults	option.h	/^    OptionParser& set_defaults(const std::string& dest, const std::string& val) {$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& dest, const std::string& val)
+optparse::OptionParser::set_usage	option.cpp	/^void OptionParser::set_usage(const string& u) {$/;"	f	class:optparse::OptionParser	signature:(const string& u)
+optparse::OptionParser::set_usage	option.h	/^    void set_usage(const std::string& u);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& u)
+optparse::OptionParser::usage	option.h	/^    OptionParser& usage(const std::string& u) { set_usage(u); return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& u)
+optparse::OptionParser::usage	option.h	/^    const std::string& usage() const { return _usage; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::version	option.h	/^    OptionParser& version(const std::string& v) { _version = v; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& v)
+optparse::OptionParser::version	option.h	/^    const std::string& version() const { return _version; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+optparse::OptionParser::~OptionParser	option.h	/^    virtual ~OptionParser() {}$/;"	f	class:optparse::OptionParser	access:public	signature:()
+optparse::SUPPRESS_HELP	option.h	/^const char* const SUPPRESS_HELP = "SUPPRESS" "HELP";$/;"	m	namespace:optparse
+optparse::SUPPRESS_USAGE	option.h	/^const char* const SUPPRESS_USAGE = "SUPPRESS" "USAGE";$/;"	m	namespace:optparse
+optparse::Value	option.h	/^class Value {$/;"	c	namespace:optparse
+optparse::Value::Value	option.h	/^    Value() : str(), valid(false) {}$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::Value	option.h	/^    Value(const std::string& v) : str(v), valid(true) {}$/;"	f	class:optparse::Value	access:public	signature:(const std::string& v)
+optparse::Value::operator bool	option.h	/^    operator bool() { bool t; return (valid && (std::istringstream(str) >> t)) ? t : false; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator const char*	option.h	/^    operator const char*() { return str.c_str(); }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator double	option.h	/^    operator double() { double t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator float	option.h	/^    operator float() { float t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator int	option.h	/^    operator int() { int t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator long	option.h	/^    operator long() { long t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator long double	option.h	/^    operator long double() { long double t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator short	option.h	/^    operator short() { short t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator unsigned int	option.h	/^    operator unsigned int() { unsigned int t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator unsigned long	option.h	/^    operator unsigned long() { unsigned long t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::operator unsigned short	option.h	/^    operator unsigned short() { unsigned short t; return (valid && (std::istringstream(str) >> t)) ? t : 0; }$/;"	f	class:optparse::Value	access:public	signature:()
+optparse::Value::str	option.h	/^    const std::string str;$/;"	m	class:optparse::Value	access:private
+optparse::Value::valid	option.h	/^    bool valid;$/;"	m	class:optparse::Value	access:private
+optparse::Values	option.h	/^class Values {$/;"	c	namespace:optparse
+optparse::Values::Values	option.h	/^    Values() : _map() {}$/;"	f	class:optparse::Values	access:public	signature:()
+optparse::Values::_appendMap	option.h	/^    lstMap _appendMap;$/;"	m	class:optparse::Values	access:private
+optparse::Values::_map	option.h	/^    strMap _map;$/;"	m	class:optparse::Values	access:private
+optparse::Values::_userSet	option.h	/^    std::set<std::string> _userSet;$/;"	m	class:optparse::Values	access:private
+optparse::Values::all	option.h	/^    const std::list<std::string>& all(const std::string& d) const { return _appendMap.find(d)->second; }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d) const
+optparse::Values::all	option.h	/^    std::list<std::string>& all(const std::string& d) { return _appendMap[d]; }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d)
+optparse::Values::const_iterator	option.h	/^    typedef std::list<std::string>::const_iterator const_iterator;$/;"	t	class:optparse::Values	access:public
+optparse::Values::get	option.h	/^    Value get(const std::string& d) const { return (is_set(d)) ? Value((*this)[d]) : Value(); }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d) const
+optparse::Values::is_set	option.h	/^    bool is_set(const std::string& d) const { return _map.find(d) != _map.end(); }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d) const
+optparse::Values::is_set_by_user	option.cpp	/^void Values::is_set_by_user(const string& d, bool yes) {$/;"	f	class:optparse::Values	signature:(const string& d, bool yes)
+optparse::Values::is_set_by_user	option.h	/^    bool is_set_by_user(const std::string& d) const { return _userSet.find(d) != _userSet.end(); }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d) const
+optparse::Values::is_set_by_user	option.h	/^    void is_set_by_user(const std::string& d, bool yes);$/;"	p	class:optparse::Values	access:public	signature:(const std::string& d, bool yes)
+optparse::Values::iterator	option.h	/^    typedef std::list<std::string>::iterator iterator;$/;"	t	class:optparse::Values	access:public
+optparse::Values::operator []	option.cpp	/^const string& Values::operator[] (const string& d) const {$/;"	f	class:optparse::Values	signature:(const string& d) const
+optparse::Values::operator []	option.h	/^    const std::string& operator[] (const std::string& d) const;$/;"	p	class:optparse::Values	access:public	signature:(const std::string& d) const
+optparse::Values::operator []	option.h	/^    std::string& operator[] (const std::string& d) { return _map[d]; }$/;"	f	class:optparse::Values	access:public	signature:(const std::string& d)
+optparse::basename	option.cpp	/^static string basename(const string& s) {$/;"	f	namespace:optparse	signature:(const string& s)
+optparse::cols	option.cpp	/^static unsigned int cols() {$/;"	f	namespace:optparse	signature:()
+optparse::lstMap	option.h	/^typedef std::map<std::string,std::list<std::string> > lstMap;$/;"	t	namespace:optparse
+optparse::optMap	option.h	/^typedef std::map<std::string,Option const*> optMap;$/;"	t	namespace:optparse
+optparse::strMap	option.h	/^typedef std::map<std::string,std::string> strMap;$/;"	t	namespace:optparse
+optparse::str_format	option.cpp	/^static string str_format(const string& s, size_t pre, size_t len, bool indent_first = true) {$/;"	f	namespace:optparse	signature:(const string& s, size_t pre, size_t len, bool indent_first = true)
+optparse::str_inc	option.cpp	/^static string str_inc(const string& s) {$/;"	f	namespace:optparse	signature:(const string& s)
+optparse::str_join	option.cpp	/^static string str_join(const string& sep, InputIterator begin, InputIterator end) {$/;"	f	namespace:optparse	signature:(const string& sep, InputIterator begin, InputIterator end)
+optparse::str_join_trans	option.cpp	/^static string str_join_trans(const string& sep, InputIterator begin, InputIterator end, UnaryOperator op) {$/;"	f	namespace:optparse	signature:(const string& sep, InputIterator begin, InputIterator end, UnaryOperator op)
+optparse::str_replace	option.cpp	/^static string str_replace(const string& s, const string& patt, const string& repl) {$/;"	f	namespace:optparse	signature:(const string& s, const string& patt, const string& repl)
+optparse::str_replace	option.cpp	/^static string& str_replace(string& s, const string& patt, const string& repl) {$/;"	f	namespace:optparse	signature:(string& s, const string& patt, const string& repl)
+optparse::str_wrap	option.cpp	/^class str_wrap {$/;"	c	namespace:optparse	file:
+optparse::str_wrap::lwrap	option.cpp	/^  const string lwrap, rwrap;$/;"	m	class:optparse::str_wrap	file:	access:public
+optparse::str_wrap::operator ()	option.cpp	/^  string operator() (const string& s) { return lwrap + s + rwrap; }$/;"	f	class:optparse::str_wrap	access:public	signature:(const string& s)
+optparse::str_wrap::rwrap	option.cpp	/^  const string lwrap, rwrap;$/;"	m	class:optparse::str_wrap	file:	access:public
+optparse::str_wrap::str_wrap	option.cpp	/^  str_wrap(const string& l, const string& r) : lwrap(l), rwrap(r) {}$/;"	f	class:optparse::str_wrap	access:public	signature:(const string& l, const string& r)
+optparse::str_wrap::str_wrap	option.cpp	/^  str_wrap(const string& w) : lwrap(w), rwrap(w) {}$/;"	f	class:optparse::str_wrap	access:public	signature:(const string& w)
+outputFile	cb/sql.cpp	/^    FILE *outputFile;$/;"	m	struct:SQLDump	file:	access:public
+outputID	cb/sql.cpp	/^    uint64_t outputID;$/;"	m	struct:SQLDump	file:	access:public
+outputIndex	cb/allBalances.cpp	/^    uint64_t outputIndex;$/;"	m	struct:Output	file:	access:public
+outputMap	cb/sql.cpp	/^    OutputMap outputMap;$/;"	m	struct:SQLDump	file:	access:public
+outputVec	cb/allBalances.cpp	/^    OutputVec *outputVec;$/;"	m	struct:Addr	file:	access:public
+p	parser.cpp	/^    const uint8_t *p;$/;"	m	struct:Map	file:	access:public
+parseBlock	parser.cpp	/^static void parseBlock($/;"	f	file:	signature:( const Block *block )
+parseInput	parser.cpp	/^static void parseInput($/;"	f	file:	signature:( const uint8_t *&p, const uint8_t *txHash, uint64_t inputIndex )
+parseInputs	parser.cpp	/^static void parseInputs($/;"	f	file:	signature:( const uint8_t *&p, const uint8_t *txHash )
+parseLongestChain	parser.cpp	/^static void parseLongestChain()$/;"	f	file:	signature:()
+parseOutput	parser.cpp	/^static void parseOutput($/;"	f	file:	signature:( const uint8_t *&p, const uint8_t *txHash, uint64_t outputIndex, const uint8_t *downTXHash, uint64_t downInputIndex, const uint8_t *downInputScript, uint64_t downInputScriptSize, bool found = false )
+parseOutputs	parser.cpp	/^static void parseOutputs($/;"	f	file:	signature:( const uint8_t *&p, const uint8_t *txHash, uint64_t stopAtIndex = -1, const uint8_t *downTXHash = 0, uint64_t downInputIndex = 0, const uint8_t *downInputScript = 0, uint64_t downInputScriptSize = 0 )
+parseTX	parser.cpp	/^static void parseTX($/;"	f	file:	signature:( const uint8_t *&p )
+parse_args	option.cpp	/^Values& OptionParser::parse_args(const int argc, char const* const* const argv) {$/;"	f	class:optparse::OptionParser	signature:(const int argc, char const* const* const argv)
+parse_args	option.cpp	/^Values& OptionParser::parse_args(const vector<string>& v) {$/;"	f	class:optparse::OptionParser	signature:(const vector<string>& v)
+parse_args	option.h	/^    Values& parse_args(InputIterator begin, InputIterator end) {$/;"	f	class:optparse::OptionParser	access:public	signature:(InputIterator begin, InputIterator end)
+parse_args	option.h	/^    Values& parse_args(const std::vector<std::string>& args);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::vector<std::string>& args)
+parse_args	option.h	/^    Values& parse_args(int argc, char const* const* argv);$/;"	p	class:optparse::OptionParser	access:public	signature:(int argc, char const* const* argv)
+parsed$	tags	/^wrapup	callback.h	\/^        virtual void       wrapup(                                     )       {               }  \\\/\\\/ Called when the whole chain has been parsed$\/;"	f	struct:Callback	access:public	signature:( )$/;"	v	typeref:struct:__anon16
+parser	cb/allBalances.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:AllBalances	file:	access:public
+parser	cb/closure.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:Closure	file:	access:public
+parser	cb/dumpTX.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:DumpTX	file:	access:public
+parser	cb/help.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:Help	file:	access:public
+parser	cb/pristine.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:Pristine	file:	access:public
+parser	cb/rewards.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:Rewards	file:	access:public
+parser	cb/simpleStats.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:SimpleStats	file:	access:public
+parser	cb/sql.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:SQLDump	file:	access:public
+parser	cb/taint.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:Taint	file:	access:public
+parser	cb/transactions.cpp	/^    optparse::OptionParser parser;$/;"	m	struct:Transactions	file:	access:public
+pass$	tags	/^Callback::endBlock	callback.h	\/^        virtual void     endBlock(const uint8_t *p                     )       {               }  \\\/\\\/ Called when an end of block is encountered during first pass$\/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )$/;"	v	typeref:struct:__anon7
+pass$	tags	/^Callback::startBlock	callback.h	\/^        virtual void   startBlock(const uint8_t *p                     )       {               }  \\\/\\\/ Called when a block is encountered during first pass$\/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )$/;"	v	typeref:struct:__anon6
+pool	cb/allBalances.cpp	/^template<> uint8_t *PagedAllocator<Addr>::pool = 0;$/;"	m	class:PagedAllocator	file:
+pool	util.cpp	/^template<> uint8_t *PagedAllocator<Block>::pool = 0;$/;"	m	class:PagedAllocator	file:
+pool	util.cpp	/^template<> uint8_t *PagedAllocator<uint160_t>::pool = 0;$/;"	m	class:PagedAllocator	file:
+pool	util.cpp	/^template<> uint8_t *PagedAllocator<uint256_t>::pool = 0;$/;"	m	class:PagedAllocator	file:
+pool	util.h	/^        static uint8_t *pool;$/;"	m	struct:PagedAllocator	access:public
+poolEnd	cb/allBalances.cpp	/^template<> uint8_t *PagedAllocator<Addr>::poolEnd = 0;$/;"	m	class:PagedAllocator	file:
+poolEnd	util.cpp	/^template<> uint8_t *PagedAllocator<Block>::poolEnd = 0;$/;"	m	class:PagedAllocator	file:
+poolEnd	util.cpp	/^template<> uint8_t *PagedAllocator<uint160_t>::poolEnd = 0;$/;"	m	class:PagedAllocator	file:
+poolEnd	util.cpp	/^template<> uint8_t *PagedAllocator<uint256_t>::poolEnd = 0;$/;"	m	class:PagedAllocator	file:
+poolEnd	util.h	/^        static uint8_t *poolEnd;$/;"	m	struct:PagedAllocator	access:public
+pr128	util.cpp	/^std::string pr128($/;"	f	signature:( const uint128_t &y )
+pr128	util.h	/^    std::string pr128($/;"	p	signature:( const uint128_t &y )
+prev	util.h	/^        Block         *prev;$/;"	m	struct:Block	access:public
+printNumber	cb/taint.cpp	/^static inline void printNumber($/;"	f	file:	signature:( const Number &x )
+print_help	option.cpp	/^void OptionParser::print_help() const {$/;"	f	class:optparse::OptionParser	signature:() const
+print_help	option.h	/^    void print_help() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+print_usage	option.cpp	/^void OptionParser::print_usage() const {$/;"	f	class:optparse::OptionParser	signature:() const
+print_usage	option.cpp	/^void OptionParser::print_usage(ostream& out) const {$/;"	f	class:optparse::OptionParser	signature:(ostream& out) const
+print_usage	option.h	/^    void print_usage() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+print_usage	option.h	/^    void print_usage(std::ostream& out) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(std::ostream& out) const
+print_version	option.cpp	/^void OptionParser::print_version() const {$/;"	f	class:optparse::OptionParser	signature:() const
+print_version	option.cpp	/^void OptionParser::print_version(ostream& out) const {$/;"	f	class:optparse::OptionParser	signature:(ostream& out) const
+print_version	option.h	/^    void print_version() const;$/;"	p	class:optparse::OptionParser	access:public	signature:() const
+print_version	option.h	/^    void print_version(std::ostream& out) const;$/;"	p	class:optparse::OptionParser	access:public	signature:(std::ostream& out) const
+pristine	cb/pristine.cpp	/^static Pristine pristine;$/;"	v	file:
+process_opt	option.cpp	/^void OptionParser::process_opt(const Option& o, const string& opt, const string& value) {$/;"	f	class:optparse::OptionParser	signature:(const Option& o, const string& opt, const string& value)
+process_opt	option.h	/^    void process_opt(const Option& option, const std::string& opt, const std::string& value);$/;"	p	class:optparse::OptionParser	access:private	signature:(const Option& option, const std::string& opt, const std::string& value)
+prog	option.h	/^    OptionParser& prog(const std::string& p) { _prog = p; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& p)
+prog	option.h	/^    const std::string& prog() const { return _prog; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+restrictMap	cb/allBalances.cpp	/^    RestrictMap restrictMap;$/;"	m	struct:AllBalances	file:	access:public
+restricts	cb/allBalances.cpp	/^    std::vector<uint160_t> restricts;$/;"	m	struct:AllBalances	file:	access:public
+reward	cb/rewards.cpp	/^    uint64_t reward;$/;"	m	struct:Rewards	file:	access:public
+rewards	cb/rewards.cpp	/^static Rewards rewards;$/;"	v	file:
+rmd160	rmd160.cpp	/^void rmd160($/;"	f	signature:( uint8_t *result, const uint8_t *data, size_t len )
+rmd160	rmd160.h	/^    void rmd160($/;"	p	signature:( uint8_t *result, const uint8_t *data, size_t led )
+rootHashes	cb/closure.cpp	/^    std::vector<uint160_t> rootHashes;$/;"	m	struct:Closure	file:	access:public
+rootHashes	cb/dumpTX.cpp	/^    std::vector<uint256_t> rootHashes;$/;"	m	struct:DumpTX	file:	access:public
+rootHashes	cb/taint.cpp	/^    std::vector<uint256_t> rootHashes;$/;"	m	struct:Taint	file:	access:public
+rootHashes	cb/transactions.cpp	/^    std::vector<uint160_t> rootHashes;$/;"	m	struct:Transactions	file:	access:public
+run	contrib/closure-taint.sh	/^function run()$/;"	f	signature:()
+rwrap	option.cpp	/^  const string lwrap, rwrap;$/;"	m	class:optparse::str_wrap	file:	access:public
+secondPass	parser.cpp	/^static void secondPass()$/;"	f	file:	signature:()
+setEmptyKey	util.h	/^                void setEmptyKey($/;"	f	struct:GoogMap::Map	access:public	signature:( const Key &empty )
+set_const	option.h	/^    Option& set_const(const std::string& c) { _const = c; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& c)
+set_default	option.h	/^    Option& set_default(T t) { std::ostringstream ss; ss << t; _default = ss.str(); return *this; }$/;"	f	class:optparse::Option	access:public	signature:(T t)
+set_default	option.h	/^    Option& set_default(const std::string& d) { _default = d; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& d)
+set_defaults	option.h	/^    OptionParser& set_defaults(const std::string& dest, const std::string& val) {$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& dest, const std::string& val)
+set_usage	option.cpp	/^void OptionParser::set_usage(const string& u) {$/;"	f	class:optparse::OptionParser	signature:(const string& u)
+set_usage	option.h	/^    void set_usage(const std::string& u);$/;"	p	class:optparse::OptionParser	access:public	signature:(const std::string& u)
+sha256	sha256.cpp	/^void sha256($/;"	f	signature:( uint8_t *result, const uint8_t *data, size_t len )
+sha256	sha256.h	/^    void sha256($/;"	p	signature:( uint8_t *result, const uint8_t *data, size_t len )
+sha256Twice	util.h	/^    static inline void sha256Twice($/;"	f	signature:( uint8_t *sha, const uint8_t *buf, uint64_t size )
+showAddr	cb/allBalances.cpp	/^    int64_t showAddr;$/;"	m	struct:AllBalances	file:	access:public
+showAllHelps	callback.cpp	/^void Callback::showAllHelps($/;"	f	class:Callback	signature:( bool longHelp )
+showAllHelps	callback.h	/^        static void showAllHelps(bool longHelp);$/;"	p	struct:Callback	access:public	signature:(bool longHelp)
+showFullAddr	util.cpp	/^void showFullAddr($/;"	f	signature:( const Hash160 &addr, bool both )
+showFullAddr	util.h	/^    void showFullAddr($/;"	p	signature:( const Hash160 &addr, bool both = false )
+showHex	util.cpp	/^void showHex($/;"	f	signature:( const uint8_t *p, size_t size, bool rev )
+showHex	util.h	/^    void showHex($/;"	p	signature:( const uint8_t *src, size_t size = kSHA256ByteSize, bool rev = true )
+showScript	util.cpp	/^void showScript($/;"	f	signature:( const uint8_t *p, size_t scriptSize, const char *header, const char *indent )
+showScript	util.h	/^    void showScript($/;"	p	signature:( const uint8_t *p, size_t scriptSize, const char *header = 0, const char *indent = 0 )
+showScriptInfo	cb/dumpTX.cpp	/^    static void showScriptInfo($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *outputScript, uint64_t outputScriptSize )
+simpleStats	cb/simpleStats.cpp	/^static SimpleStats simpleStats;$/;"	v	file:
+size	parser.cpp	/^    uint64_t size;$/;"	m	struct:Map	file:	access:public
+solveOutputScript	util.cpp	/^int solveOutputScript($/;"	f	signature:( uint8_t *pubKeyHash, const uint8_t *script, uint64_t scriptSize, uint8_t *type )
+solveOutputScript	util.h	/^    int solveOutputScript($/;"	p	signature:( uint8_t *pubKeyHash, const uint8_t *script, uint64_t scriptSize, uint8_t *type )
+sqlDump	cb/sql.cpp	/^static SQLDump sqlDump;$/;"	v	file:
+srcTxMap	cb/taint.cpp	/^    TxMap srcTxMap;$/;"	m	struct:Taint	file:	access:public
+start	callback.h	/^        virtual void        start(  const Block *s, const Block *e     )       {               }  \/\/ Called when the second parse of the full chain starts$/;"	f	struct:Callback	access:public	signature:( const Block *s, const Block *e )
+start	cb/allBalances.cpp	/^    virtual void start($/;"	f	struct:AllBalances	access:public	signature:( const Block *s, const Block *e )
+start	cb/transactions.cpp	/^    virtual void start($/;"	f	struct:Transactions	access:public	signature:( const Block *, const Block * )
+start	parser.cpp	/^    static inline void        start(const Block *s, const Block *e)        { DO(gCallback->start(s, e));      }$/;"	f	file:	signature:(const Block *s, const Block *e)
+start	tags	/^start	parser.cpp	\/^    static inline void        start(const Block *s, const Block *e)        { DO(gCallback->start(s, e));      }$\/;"	f	file:	signature:(const Block *s, const Block *e)$/;"	f	file:	signature:(const Block *s, const Block *e)
+startBlock	callback.h	/^        virtual void   startBlock(  const Block *b, uint64_t chainSize )       {               }  \/\/ Called when a new block is encountered$/;"	f	struct:Callback	access:public	signature:( const Block *b, uint64_t chainSize )
+startBlock	callback.h	/^        virtual void   startBlock(const uint8_t *p                     )       {               }  \/\/ Called when a block is encountered during first pass$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+startBlock	cb/allBalances.cpp	/^    virtual void startBlock($/;"	f	struct:AllBalances	access:public	signature:( const Block *b, uint64_t chainSize )
+startBlock	cb/dumpTX.cpp	/^    virtual void startBlock($/;"	f	struct:DumpTX	access:public	signature:( const Block *b, uint64_t )
+startBlock	cb/pristine.cpp	/^    virtual void startBlock($/;"	f	struct:Pristine	access:public	signature:( const Block *b, uint64_t )
+startBlock	cb/rewards.cpp	/^    virtual void startBlock($/;"	f	struct:Rewards	access:public	signature:( const Block *b, uint64_t )
+startBlock	cb/simpleStats.cpp	/^    virtual void   startBlock(  const Block *b, uint64_t           ) { ++nbValidBlocks; }$/;"	f	struct:SimpleStats	access:public	signature:( const Block *b, uint64_t )
+startBlock	cb/simpleStats.cpp	/^    virtual void   startBlock(const uint8_t *p                     ) { ++nbBlocks;      }$/;"	f	struct:SimpleStats	access:public	signature:(const uint8_t *p )
+startBlock	cb/sql.cpp	/^    virtual void startBlock($/;"	f	struct:SQLDump	access:public	signature:( const Block *b, uint64_t )
+startBlock	cb/transactions.cpp	/^    virtual void startBlock($/;"	f	struct:Transactions	access:public	signature:( const Block *b, uint64_t )
+startBlock	parser.cpp	/^    static inline void   startBlock(const uint8_t *p)                      { DO(gCallback->startBlock(p));    }$/;"	f	file:	signature:(const uint8_t *p)
+startBlock	parser.cpp	/^static inline void  startBlock(const Block *b)    { gCallback->startBlock(b, gChainSize); }$/;"	f	file:	signature:(const Block *b)
+startBlock	tags	/^startBlock	parser.cpp	\/^static inline void  startBlock(const Block *b)    { gCallback->startBlock(b, gChainSize); }$\/;"	f	file:	signature:(const Block *b)$/;"	f	file:	signature:(const Block *b)
+startInput	callback.h	/^        virtual void   startInput(const uint8_t *p                     )       {               }  \/\/ Called when a TX input is encountered$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+startInput	cb/dumpTX.cpp	/^    virtual void startInput($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p )
+startInput	cb/pristine.cpp	/^    virtual void startInput($/;"	f	struct:Pristine	access:public	signature:( const uint8_t *p )
+startInput	cb/rewards.cpp	/^    virtual void   startInput(const uint8_t *p)$/;"	f	struct:Rewards	access:public	signature:(const uint8_t *p)
+startInput	cb/simpleStats.cpp	/^    virtual void   startInput(const uint8_t *p                     ) { ++nbInputs;      }$/;"	f	struct:SimpleStats	access:public	signature:(const uint8_t *p )
+startInput	parser.cpp	/^    static inline void   startInput(const uint8_t *p)                      { DO(gCallback->startInput(p));    }$/;"	f	file:	signature:(const uint8_t *p)
+startInput	tags	/^startInput	callback.h	\/^        virtual void   startInput(const uint8_t *p                     )       {               }  \\\/\\\/ Called when a TX input is encountered$\/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )$/;"	f	signature:(const uint8_t *p )
+startInputs	callback.h	/^        virtual void  startInputs(const uint8_t *p                     )       {               }  \/\/ Called when the start of a TX's input array is encountered$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+startInputs	cb/dumpTX.cpp	/^    virtual void startInputs($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p )
+startInputs	cb/pristine.cpp	/^    virtual void startInputs($/;"	f	struct:Pristine	access:public	signature:( const uint8_t *p )
+startInputs	cb/rewards.cpp	/^    virtual void  startInputs(const uint8_t *p)$/;"	f	struct:Rewards	access:public	signature:(const uint8_t *p)
+startInputs	parser.cpp	/^    static inline void  startInputs(const uint8_t *p)                      { DO(gCallback->startInputs(p));   }$/;"	f	file:	signature:(const uint8_t *p)
+startMap	callback.h	/^        virtual void     startMap(const uint8_t *p                     )       {               }  \/\/ Called when a blockchain file is mapped into memory$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+startMap	cb/simpleStats.cpp	/^    virtual void     startMap(const uint8_t *p                     ) { ++nbMaps;        }$/;"	f	struct:SimpleStats	access:public	signature:(const uint8_t *p )
+startMap	parser.cpp	/^static inline void     startMap(const uint8_t *p) { gCallback->startMap(p);               }$/;"	f	file:	signature:(const uint8_t *p)
+startMap	tags	/^startMap	parser.cpp	\/^static inline void     startMap(const uint8_t *p) { gCallback->startMap(p);               }$\/;"	f	file:	signature:(const uint8_t *p)$/;"	f	file:	signature:(const uint8_t *p)
+startOutput	callback.h	/^        virtual void  startOutput(const uint8_t *p                     )       {               }  \/\/ Called when a TX output is encountered$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+startOutput	cb/dumpTX.cpp	/^    virtual void startOutput($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p )
+startOutput	cb/simpleStats.cpp	/^    virtual void  startOutput(const uint8_t *p                     ) { ++nbOutputs;     }$/;"	f	struct:SimpleStats	access:public	signature:(const uint8_t *p )
+startOutput	parser.cpp	/^    static inline void  startOutput(const uint8_t *p)                      { DO(gCallback->startOutput(p));   }$/;"	f	file:	signature:(const uint8_t *p)
+startOutput	tags	/^startOutput	callback.h	\/^        virtual void  startOutput(const uint8_t *p                     )       {               }  \\\/\\\/ Called when a TX output is encountered$\/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )$/;"	f	signature:(const uint8_t *p )
+startOutputs	callback.h	/^        virtual void startOutputs(const uint8_t *p                     )       {               }  \/\/ Called when the start of a TX's output array is encountered$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )
+startOutputs	cb/dumpTX.cpp	/^    virtual void startOutputs($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p )
+startOutputs	parser.cpp	/^    static inline void startOutputs(const uint8_t *p)                      { DO(gCallback->startOutputs(p));  }$/;"	f	file:	signature:(const uint8_t *p)
+startOutputs	tags	/^Callback::startOutputs	callback.h	\/^        virtual void startOutputs(const uint8_t *p                     )       {               }  \\\/\\\/ Called when the start of a TX's output array is encountered$\/;"	f	struct:Callback	access:public	signature:(const uint8_t *p )$/;"	f	signature:(const uint8_t *p )
+startTX	callback.h	/^        virtual void      startTX(const uint8_t *p, const uint8_t *hash)       {               }  \/\/ Called when a new TX is encountered$/;"	f	struct:Callback	access:public	signature:(const uint8_t *p, const uint8_t *hash)
+startTX	cb/closure.cpp	/^    virtual void startTX($/;"	f	struct:Closure	access:public	signature:( const uint8_t *p, const uint8_t * )
+startTX	cb/dumpTX.cpp	/^    virtual void startTX($/;"	f	struct:DumpTX	access:public	signature:( const uint8_t *p, const uint8_t *hash )
+startTX	cb/pristine.cpp	/^    virtual void startTX($/;"	f	struct:Pristine	access:public	signature:( const uint8_t *p, const uint8_t *hash )
+startTX	cb/rewards.cpp	/^    virtual void startTX($/;"	f	struct:Rewards	access:public	signature:( const uint8_t *p, const uint8_t *hash )
+startTX	cb/simpleStats.cpp	/^    virtual void      startTX(const uint8_t *p, const uint8_t *hash) { ++nbTransactions;}$/;"	f	struct:SimpleStats	access:public	signature:(const uint8_t *p, const uint8_t *hash)
+startTX	cb/sql.cpp	/^    virtual void startTX($/;"	f	struct:SQLDump	access:public	signature:( const uint8_t *p, const uint8_t *hash )
+startTX	cb/taint.cpp	/^    virtual void startTX($/;"	f	struct:Taint	access:public	signature:( const uint8_t *p, const uint8_t *hash )
+startTX	parser.cpp	/^    static inline void      startTX(const uint8_t *p, const uint8_t *hash) { DO(gCallback->startTX(p, hash)); }$/;"	f	file:	signature:(const uint8_t *p, const uint8_t *hash)
+startTime	cb/closure.cpp	/^    double startTime;$/;"	m	struct:Closure	file:	access:public
+starts$	tags	/^Callback::start	callback.h	\/^        virtual void        start(  const Block *s, const Block *e     )       {               }  \\\/\\\/ Called when the second parse of the full chain starts$\/;"	f	struct:Callback	access:public	signature:( const Block *s, const Block *e )$/;"	v	typeref:struct:__anon8
+str	option.h	/^    const std::string str;$/;"	m	class:optparse::Value	access:private
+strMap	option.h	/^typedef std::map<std::string,std::string> strMap;$/;"	t	namespace:optparse
+str_format	option.cpp	/^static string str_format(const string& s, size_t pre, size_t len, bool indent_first = true) {$/;"	f	namespace:optparse	signature:(const string& s, size_t pre, size_t len, bool indent_first = true)
+str_inc	option.cpp	/^static string str_inc(const string& s) {$/;"	f	namespace:optparse	signature:(const string& s)
+str_join	option.cpp	/^static string str_join(const string& sep, InputIterator begin, InputIterator end) {$/;"	f	namespace:optparse	signature:(const string& sep, InputIterator begin, InputIterator end)
+str_join_trans	option.cpp	/^static string str_join_trans(const string& sep, InputIterator begin, InputIterator end, UnaryOperator op) {$/;"	f	namespace:optparse	signature:(const string& sep, InputIterator begin, InputIterator end, UnaryOperator op)
+str_replace	option.cpp	/^static string str_replace(const string& s, const string& patt, const string& repl) {$/;"	f	namespace:optparse	signature:(const string& s, const string& patt, const string& repl)
+str_replace	option.cpp	/^static string& str_replace(string& s, const string& patt, const string& repl) {$/;"	f	namespace:optparse	signature:(string& s, const string& patt, const string& repl)
+str_wrap	option.cpp	/^  str_wrap(const string& l, const string& r) : lwrap(l), rwrap(r) {}$/;"	f	class:optparse::str_wrap	access:public	signature:(const string& l, const string& r)
+str_wrap	option.cpp	/^  str_wrap(const string& w) : lwrap(w), rwrap(w) {}$/;"	f	class:optparse::str_wrap	access:public	signature:(const string& w)
+str_wrap	option.cpp	/^class str_wrap {$/;"	c	namespace:optparse	file:
+subs	cb/transactions.cpp	/^    uint64_t subs;$/;"	m	struct:Transactions	file:	access:public
+sum	cb/allBalances.cpp	/^    uint64_t sum;$/;"	m	struct:Addr	file:	access:public
+sum	cb/transactions.cpp	/^    uint64_t sum;$/;"	m	struct:Transactions	file:	access:public
+sysErr	errlog.h	/^    static inline void sysErr($/;"	f	signature:( const char *format, ... )
+sysErrFatal	errlog.h	/^    static inline void sysErrFatal($/;"	f	signature:( const char *format, ... )
+taint	cb/taint.cpp	/^static Taint taint;$/;"	v	file:
+taintMap	cb/taint.cpp	/^    TaintMap taintMap;$/;"	m	struct:Taint	file:	access:public
+threshold	cb/taint.cpp	/^    double threshold;$/;"	m	struct:Taint	file:	access:public
+time	cb/allBalances.cpp	/^    int64_t time;$/;"	m	struct:Output	file:	access:public
+title	option.h	/^    OptionGroup& title(const std::string& t) { _title = t; return *this; }$/;"	f	class:optparse::OptionGroup	access:public	signature:(const std::string& t)
+title	option.h	/^    const std::string& title() const { return _title; }$/;"	f	class:optparse::OptionGroup	access:public	signature:() const
+toHex	util.cpp	/^void toHex($/;"	f	signature:( uint8_t *dst, const uint8_t *src, size_t size, bool rev )
+toHex	util.h	/^    void toHex($/;"	p	signature:( uint8_t *dst, const uint8_t *src, size_t size = kSHA256ByteSize, bool rev = true )
+transactions	cb/transactions.cpp	/^static Transactions transactions;$/;"	v	file:
+txBad	cb/taint.cpp	/^    Number txBad;$/;"	m	struct:Taint	file:	access:public
+txFile	cb/sql.cpp	/^    FILE *txFile;$/;"	m	struct:SQLDump	file:	access:public
+txHash	cb/taint.cpp	/^    const uint8_t *txHash;$/;"	m	struct:Taint	file:	access:public
+txID	cb/sql.cpp	/^    uint64_t txID;$/;"	m	struct:SQLDump	file:	access:public
+txMap	cb/dumpTX.cpp	/^    TxMap txMap;$/;"	m	struct:DumpTX	file:	access:public
+txMap	cb/pristine.cpp	/^    TxMap txMap;$/;"	m	struct:Pristine	file:	access:public
+txStart	cb/dumpTX.cpp	/^    const uint8_t *txStart;$/;"	m	struct:DumpTX	file:	access:public
+txTotal	cb/taint.cpp	/^    uint128_t txTotal;$/;"	m	struct:Taint	file:	access:public
+type	option.h	/^    Option& type(const std::string& t) { _type = t; return *this; }$/;"	f	class:optparse::Option	access:public	signature:(const std::string& t)
+type	option.h	/^    const std::string& type() const { return _type; }$/;"	f	class:optparse::Option	access:public	signature:() const
+uint128_t	util.h	/^    typedef unsigned int uint128_t __attribute__((mode(TI)));$/;"	t
+uint160_t	util.h	/^    struct uint160_t { uint8_t v[kRIPEMD160ByteSize]; };$/;"	s
+uint160_t::v	util.h	/^    struct uint160_t { uint8_t v[kRIPEMD160ByteSize]; };$/;"	m	struct:uint160_t	access:public
+uint256_t	util.h	/^    struct uint256_t { uint8_t v[   kSHA256ByteSize]; };$/;"	s
+uint256_t::v	util.h	/^    struct uint256_t { uint8_t v[   kSHA256ByteSize]; };$/;"	m	struct:uint256_t	access:public
+unlikely	common.h	14;"	d
+unlikely	common.h	18;"	d
+upTXHash	cb/allBalances.cpp	/^    const uint8_t *upTXHash;$/;"	m	struct:Output	file:	access:public
+usage	option.h	/^    OptionParser& usage(const std::string& u) { set_usage(u); return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& u)
+usage	option.h	/^    const std::string& usage() const { return _usage; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+usecs	util.cpp	/^double usecs()$/;"	f	signature:()
+usecs	util.h	/^    double usecs();$/;"	p	signature:()
+v	util.h	/^    struct uint160_t { uint8_t v[kRIPEMD160ByteSize]; };$/;"	m	struct:uint160_t	access:public
+v	util.h	/^    struct uint256_t { uint8_t v[   kSHA256ByteSize]; };$/;"	m	struct:uint256_t	access:public
+vError	errlog.h	/^    static inline void vError($/;"	f	signature:( int level, bool system, const char *format, va_list vaList )
+valid	option.h	/^    bool valid;$/;"	m	class:optparse::Value	access:private
+value	cb/allBalances.cpp	/^    int64_t value;$/;"	m	struct:Output	file:	access:public
+valueIn	cb/dumpTX.cpp	/^    uint64_t valueIn;$/;"	m	struct:DumpTX	file:	access:public
+valueOut	cb/dumpTX.cpp	/^    uint64_t valueOut;$/;"	m	struct:DumpTX	file:	access:public
+version	option.h	/^    OptionParser& version(const std::string& v) { _version = v; return *this; }$/;"	f	class:optparse::OptionParser	access:public	signature:(const std::string& v)
+version	option.h	/^    const std::string& version() const { return _version; }$/;"	f	class:optparse::OptionParser	access:public	signature:() const
+vertices	cb/closure.cpp	/^    std::vector<uint64_t> vertices;$/;"	m	struct:Closure	file:	access:public
+volume	cb/simpleStats.cpp	/^    uint128_t volume;$/;"	m	struct:SimpleStats	file:	access:public
+warning	errlog.h	/^    static inline void warning($/;"	f	signature:( const char *format, ... )
+wrapup	callback.h	/^        virtual void       wrapup(                                     )       {               }  \/\/ Called when the whole chain has been parsed$/;"	f	struct:Callback	access:public	signature:( )
+wrapup	cb/allBalances.cpp	/^    virtual void wrapup()$/;"	f	struct:AllBalances	access:public	signature:()
+wrapup	cb/closure.cpp	/^    virtual void wrapup()$/;"	f	struct:Closure	access:public	signature:()
+wrapup	cb/pristine.cpp	/^    virtual void wrapup()$/;"	f	struct:Pristine	access:public	signature:()
+wrapup	cb/simpleStats.cpp	/^    virtual void wrapup()$/;"	f	struct:SimpleStats	access:public	signature:()
+wrapup	cb/sql.cpp	/^    virtual void wrapup()$/;"	f	struct:SQLDump	access:public	signature:()
+wrapup	cb/taint.cpp	/^    virtual void wrapup()$/;"	f	struct:Taint	access:public	signature:()
+wrapup	cb/transactions.cpp	/^    virtual void wrapup()$/;"	f	struct:Transactions	access:public	signature:()
+writeEscapedBinaryBuffer	cb/sql.cpp	/^static void writeEscapedBinaryBuffer($/;"	f	file:	signature:( FILE *f, const uint8_t *p, size_t n )
+~Callback	option.h	/^  virtual ~Callback() {}$/;"	f	class:optparse::Callback	access:public	signature:()
+~Option	option.h	/^    virtual ~Option() {}$/;"	f	class:optparse::Option	access:public	signature:()
+~OptionGroup	option.h	/^    virtual ~OptionGroup() {}$/;"	f	class:optparse::OptionGroup	access:public	signature:()
+~OptionParser	option.h	/^    virtual ~OptionParser() {}$/;"	f	class:optparse::OptionParser	access:public	signature:()

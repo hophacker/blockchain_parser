@@ -1,3 +1,44 @@
+Orphan Chain Finder
+===========
+
+# Install
+    ~$ make
+# Before Run
+Make sure your blocks is put into folder: **$HOME/.bitcoind/blocks_orphan**
+
+This can be done by either:
+
+* Make that folder and put "blk00***.dat" files (the number should be continues) into the folder.
+* Make a soft link to bitcoind's default blocks directory: `ln $HOME/.bitcoind/blocks -s $HOME/.bitcoind/blocks_orphan`. 
+
+# Run
+* Dump all the hash relationships:
+    * `./parser stat --startBlk=149 --endBlk=154`. 
+    * You can provide any start block file number to "startBlk" any end block file number to "endBlk". 
+    * Then all the hashes of those blocks are dumped into file "parser.output". There are three columns in that file:
+        * The first column is a hash of a block `B`; 
+        * The second column is the hash of `B`'s previous block's hash. 
+        * The third column is block `B`'s relative height. But since the height will calculated by "analyze" too, so it's not that important.
+* Dumps all the orphan branches into "branch.out" from input "parser.output"
+    * `./analyze`
+
+# File description
+* *parser.output* contains all relationships between blocks.
+* *branch.out* is the final report of all orphan branches.
+* *analyze.cpp* is the cpp source code which generates *branch.out* from *parser.output*
+
+# Results
+* The last orphan block in our data is *0000000000000000391418c58f105aa7f74c04075da3fde0d6c82ddd166b90c7* and has timestamp in *2014-07-06 01:14:21*
+* The first orphan block in our data is *00000000000000005626add2e7240a28b2dd3a4e4e2acefa8c4c9825d1325e68* and has timestamp in *2014-05-03 13:41:53*
+* Total orphan branch times is *43* out of *64* days.
+* Only found orphan branches with length *1*.  
+
+
+## Maintained by  *Jie Feng*, email: *jiefeng.hopkins@gmail.com*
+---------------------------------------------------------
+
+
+
 blockparser
 ===========
 
@@ -82,10 +123,6 @@ blockparser
         . OTOH, it is fairly simple, short, and efficient. If you want to understand how the blockchain
           data structure works, the code in parser.cpp is a solid way to start.
 
-        . blockparser uses mmap() extensively. There has been report that it does not play well with
-          encrypted partitions. Solution: move your blockchain to a normal disk. That's likely to make
-          your bitcoin install a lot more efficient anyways.
-
     Hacking the code:
     -----------------
 
@@ -125,7 +162,7 @@ blockparser
           to overload to achieve your goal.
 
         . The code makes heavy use of the google dense hash maps. You can switch it to use sparse hash
-          maps (see Makefile, search for: DENSE, undef it). Sparse hash maps are slower but save quite a
+          maps (see util.h, search for: DENSE, undef it). Sparse hash maps are slower but save quite a
           bit of RAM.
 
     License:

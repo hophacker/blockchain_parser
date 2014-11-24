@@ -1,6 +1,7 @@
-
+#include <iostream>
 #include <util.h>
 #include <alloca.h>
+#include <fstream>
 #include <common.h>
 #include <errlog.h>
 #include <rmd160.h>
@@ -71,6 +72,17 @@ void showHex(
     uint8_t* buf = (uint8_t*)alloca(2*size + 1);
     toHex(buf, p, size, rev);
     printf("%s", buf);
+}
+void showHex(
+	std::ofstream& pout,
+    const uint8_t *p,
+    size_t        size,
+    bool          rev
+)
+{
+    uint8_t* buf = (uint8_t*)alloca(2*size + 1);
+    toHex(buf, p, size, rev);
+    pout << buf;
 }
 
 uint8_t fromHexDigit(
@@ -228,14 +240,22 @@ int solveOutputScript(
     type[0] = 0;
 
     // The most common output script type, pays to hash160(pubKey)
+/*    76       A9             14
+    OP_DUP OP_HASH160    Bytes to push
+
+    89 AB CD EF AB BA AB BA AB BA AB BA AB BA AB BA AB BA AB BA
+    Data to push
+    88         AC
+	OP_EQUALVERIFY OP_CHECKSIG
+*/
     if(
         likely(
+              25==scriptSize             &&
             0x76==script[0]              &&  // OP_DUP
             0xA9==script[1]              &&  // OP_HASH160
               20==script[2]              &&  // OP_PUSHDATA(20)
             0x88==script[scriptSize-2]   &&  // OP_EQUALVERIFY
-            0xAC==script[scriptSize-1]   &&  // OP_CHECKSIG
-              25==scriptSize
+            0xAC==script[scriptSize-1]       // OP_CHECKSIG
         )
     )
     {
@@ -246,9 +266,9 @@ int solveOutputScript(
     // Output script commonly found in block reward TX, pays to explicit pubKey
     if(
         likely(
+              67==scriptSize            &&
               65==script[0]             &&  // OP_PUSHDATA(65)
-            0xAC==script[scriptSize-1]  &&  // OP_CHECKSIG
-              67==scriptSize
+            0xAC==script[scriptSize-1]      // OP_CHECKSIG
         )
     )
     {
@@ -261,9 +281,9 @@ int solveOutputScript(
     // Unusual output script, pays to explicit compressed pubKeys
     if(
         likely(
+              35==scriptSize           &&
               33==script[0]            &&  // OP_PUSHDATA(33)
-            0xAC==script[scriptSize-1] &&  // OP_CHECKSIG
-              35==scriptSize
+            0xAC==script[scriptSize-1]     // OP_CHECKSIG
         )
     )
     {
@@ -280,10 +300,10 @@ int solveOutputScript(
     // Recent output script type, pays to hash160(script)
     if(
         likely(
+              23==scriptSize            &&
             0xA9==script[0]             &&  // OP_HASH160
               20==script[1]             &&  // OP_PUSHDATA(20)
-            0x87==script[scriptSize-1]  &&  // OP_EQUAL
-              23==scriptSize
+            0x87==script[scriptSize-1]      // OP_EQUAL
         )
     )
     {
@@ -318,10 +338,7 @@ int solveOutputScript(
     return -1;
 }
 
-const uint8_t *loadKeyHash(
-    const uint8_t *hexHash
-)
-{
+const uint8_t *loadKeyHash( const uint8_t *hexHash ) {
     static bool loaded = false;
     static uint8_t hash[kRIPEMD160ByteSize];
     const char *someHexHash = "0568015a9facccfd09d70d409b6fc1a5546cecc6"; // 1VayNert3x1KzbpzMGt2qdqrAThiRovi8 deepbit's very large address
@@ -356,13 +373,7 @@ uint8_t fromB58Digit(
     return 0xff;
 }
 
-bool addrToHash160(
-          uint8_t *hash160,
-    const uint8_t *addr,
-             bool checkHash,
-             bool verbose
-)
-{
+bool addrToHash160( uint8_t *hash160, const uint8_t *addr, bool checkHash, bool verbose ) {
     static BIGNUM *sum = 0;
     static BN_CTX *ctx = 0;
     if(unlikely(!ctx)) {
@@ -428,25 +439,10 @@ bool addrToHash160(
 
         uint8_t data[1+kRIPEMD160ByteSize];
         memcpy(1+data, hash160, kRIPEMD160ByteSize);
-
-        #if defined(PROTOSHARES)
-            uint8_t type = 56
-        #endif
-
-        #if defined(DARKCOIN)
-            data[0] = 48 + 28;
-        #endif
-
         #if defined(LITECOIN)
             data[0] = 48;
-        #endif
-
-        #if defined(BITCOIN)
+        #else
             data[0] = 0;
-        #endif
-        
-        #if defined(FEDORACOIN)
-            data[0] = 33;
         #endif
 
         uint8_t sha[kSHA256ByteSize];
@@ -722,11 +718,7 @@ std::string pr128(
     return std::string(p[0]!='0' ? p : (1022+result==p) ? p : p+1);
 }
 
-void showFullAddr(
-    const Hash160 &addr,
-    bool both
-)
-{
+void showFullAddr( const Hash160 &addr, bool both ) {
     uint8_t b58[128];
     if(both) showHex(addr, sizeof(uint160_t), false);
     hash160ToAddr(b58, addr);
@@ -736,10 +728,7 @@ void showFullAddr(
     );
 }
 
-uint64_t getBaseReward(
-    uint64_t h
-)
-{
+uint64_t getBaseReward( uint64_t h ) {
     static const uint64_t kCoin = 100000000;
     uint64_t reward = (50 * kCoin);
     uint64_t shift = (h/210000);
@@ -747,18 +736,22 @@ uint64_t getBaseReward(
     return reward;
 }
 
-#if defined(DARKCOIN)
 
-    #include <h9/h9.h>
-
-    void h9(
-              uint8_t *h9r,
-        const uint8_t *buf,
-        uint64_t      size
-    ) {
-        uint256 hash = Hash9(buf, size + buf);
-        memcpy(h9r, &hash, sizeof(hash));
-    }
-
-#endif
-
+//jie
+void showHash256(Block* block){
+	if (!block){
+		std::cout << std::string(64, '0');
+	}else{
+		if (block->curHash)
+			showHex((const uint8_t *)block->curHash, 32, false);
+	}
+}
+void showHash256(std::ofstream& pout, Block* block){
+	if (!block){
+		pout << std::string(64, '0');
+	}else{
+		if (block->curHash)
+			showHex(pout, (const uint8_t *)block->curHash, 32, false);
+		else pout << std::string(64, '0');
+	}
+}

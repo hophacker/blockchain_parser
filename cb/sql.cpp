@@ -8,6 +8,8 @@
 #include <option.h>
 #include <callback.h>
 
+
+#define VERSION_PAY_TO_HASH    5
 static uint8_t empty[kSHA256ByteSize] = { 0x42 };
 typedef GoogMap<Hash256, uint64_t, Hash256Hasher, Hash256Equal>::Map OutputMap;
 
@@ -221,7 +223,7 @@ struct SQLDump:public Callback
         // id BIGINT PRIMARY KEY
         // hash BINARY(32)
         // blockID BIGINT
-        fprintf(txFile, "%" PRIu64 "\t", txID++);
+        fprintf(txFile, "%" PRIu64 "\t", ++txID);
 
         writeEscapedBinaryBuffer(txFile, hash, kSHA256ByteSize);
         fputc('\t', txFile);
@@ -245,8 +247,10 @@ struct SQLDump:public Callback
         uint8_t addrType[3];
         uint160_t pubKeyHash;
         int type = solveOutputScript(pubKeyHash.v, outputScript, outputScriptSize, addrType);
-        if(likely(0<=type)) hash160ToAddr(address, pubKeyHash.v);
-
+        if(likely(0<=type))
+        	hash160ToAddr(address, pubKeyHash.v);
+        else if (type == 3) // I don't know what does 3 stands for
+        	hash160ToAddr(address, pubKeyHash.v, VERSION_PAY_TO_HASH);
         // id BIGINT PRIMARY KEY
         // dstAddress CHAR(36)
         // value BIGINT
